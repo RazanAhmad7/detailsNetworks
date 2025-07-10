@@ -1,0 +1,796 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    Layout = null;
+}
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - DetailsNetworks</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/DetailsNetworks.styles.css" asp-append-version="true" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+   
+</head>
+
+    <body>
+
+    <!-- Hero Section -->
+    <section class="hero-section gradient-bg">
+        <!-- Top contact info bar -->
+        <div class="container-fluid py-1 px-3 d-none d-lg-flex justify-content-end">
+            <div class="me-3" style="color:#fff; font-size:1rem; font-weight:600;">
+                077 777 7777
+            </div>
+            <div class="me-2" style="color:#fff; font-size:0.95rem;">
+                ibrahim@detailsnetworks.com
+            </div>
+        </div>
+
+        <nav class="navbar p-0 navbar-expand-lg navbar-dark mt-2 mx-3 mb-4"
+             style=" background: rgba(9,6,80,0.95); border-radius: 2rem;border: 2px solid #fff;">
+            <div class="container-fluid align-items-center">
+                <a class="navbar-brand d-flex align-items-center" href="#">
+                    <div style="width:80px; height:65px; margin-left:15px; border-radius:50%; display:flex; align-items:center; justify-content:center; margin-right:10px;">
+                       <img src="~/images/الشعار png.png" width="160" height="135" alt="Alternate Text" />
+                    </div>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+                        aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-center" id="mainNavbar">
+                    <ul class="navbar-nav mb-lg-0">
+                        <li class="nav-item mx-2">
+                            <a class="nav-link text-white fw-bold" href="#about">About Details Networks</a>
+                        </li>
+                        <li class="nav-item mx-2">
+                            <a class="nav-link text-white fw-bold" href="#services">Installations & Solutions</a>
+                        </li>
+                        <li class="nav-item mx-2">
+                            <a class="nav-link text-white fw-bold" href="#it">Managed IT Services</a>
+                        </li>
+                        <li class="nav-item mx-2">
+                            <a class="nav-link text-white fw-bold" href="#support">Remote Support</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="d-flex align-items-center ms-auto">
+                   
+                    <a href="#contact" class="btn btn-outline-light rounded-pill px-4 py-2 fw-bold"
+                       style="border-width:2px; font-size:1.1rem; background:#EB5336 ;">Contact Us</a>
+                </div>
+            </div>
+        </nav>
+        <div class="container">
+            <h1 class="hero-title mb-3">
+                Smart Installs. Stronger Connections.<br><span class="accent">
+                    IT's that
+                    Simple.
+                </span>
+            </h1>
+            <p class="hero-desc mb-4">
+                MTC Networks specializes in structured cabling, WiFi solutions, access control,
+                security camera installations and audio systems. MTC Networks provides high-quality tech solutions designed
+                for seamless integration and optimal performance for <span style="color:#EB5336;">commercial</span> and
+                <span style="color:#EB5336;">residential</span> clients.
+            </p>
+            <div class="hero-icons mb-4">
+                <a href="#faqs" class="hero-icon-link"><span class="me-1">&#x2753;</span> FAQs</a>
+                <a href="#why" class="hero-icon-link"><span class="me-1">&#x2B50;</span> Why MTC Networks</a>
+                <a href="#reviews" class="hero-icon-link"><span class="me-1">&#x1F31F;</span> Customer Reviews</a>
+                <a href="#connect" class="hero-icon-link"><span class="me-1">&#x2709;&#xFE0F;</span> Let's Connect</a>
+            </div>
+            <img src="/images/موقع11.png" alt="Network cables" class="hero-img mt-3" />
+
+        </div>
+    </section>
+
+    <section class="services-section gradient-bg">
+        <div class="container">
+            <h2 class="sections-title">Our Services</h2>
+
+            <div class="timeline-container">
+                <div class="timeline-line"></div>
+
+                <!-- Solutions & Installations -->
+                <div class="service-section">
+                    <div class="service-header">
+                        <div class="timeline-dot"></div>
+                        <h3 class="service-title">Solutions & Installations</h3>
+                    </div>
+                    <p class="service-description">
+                        Specializing in new and retrofit residential and commercial projects, including educational institutions, places of worship, warehouses, restaurants, and office buildings, we provide comprehensive services ensure seamless integration of technology, enhancing functionality and efficiency across various environments.
+                    </p>
+
+                    <div class="service-cards">
+                        <div class="service-card">
+                            <div class="card-arrow">
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="default-content">
+                                <div class="card-content">
+                                    <div class="card-icon">
+                                        <i class="fas fa-wifi"></i>
+                                    </div>
+                                    <h4 class="card-title">Networking & WiFi</h4>
+                                </div>
+                            </div>
+                            <div class="hover-content">
+                                <p class="hover-text">
+                                    WiFi technology that ensures seamless connectivity, high-speed performance, and optimal coverage.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="service-card">
+                            <div class="card-arrow">
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="default-content">
+                                <div class="card-content">
+                                    <div class="card-icon">
+                                        <i class="fas fa-network-wired"></i>
+                                    </div>
+                                    <h4 class="card-title">Data and Fiber Cabling</h4>
+                                </div>
+                            </div>
+                            <div class="hover-content">
+                                <p class="hover-text">
+                                    High-performance data-cabling solutions that lay the foundation for your network connectivity.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="service-card">
+                            <div class="card-arrow">
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="default-content">
+                                <div class="card-content">
+                                    <div class="card-icon">
+                                        <i class="fas fa-video"></i>
+                                    </div>
+                                    <h4 class="card-title">Security Cameras and Doorbells</h4>
+                                </div>
+                            </div>
+                            <div class="hover-content">
+                                <p class="hover-text">
+                                    Advanced surveillance capabilities, allowing you to monitor and secure your premises effectively.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="service-card">
+                            <div class="card-arrow">
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="default-content">
+                                <div class="card-content">
+                                    <div class="card-icon">
+                                        <i class="fas fa-tv"></i>
+                                    </div>
+                                    <h4 class="card-title">TV and Audio</h4>
+                                </div>
+                            </div>
+                            <div class="hover-content">
+                                <p class="hover-text">
+                                    Modern wall-mounted TVs, video walls, and advanced surround sound systems tailored to your needs.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="service-card">
+                            <div class="card-arrow">
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="default-content">
+                                <div class="card-content">
+                                    <div class="card-icon">
+                                        <i class="fas fa-key"></i>
+                                    </div>
+                                    <h4 class="card-title">Access Control</h4>
+                                </div>
+                            </div>
+                            <div class="hover-content">
+                                <p class="hover-text">
+                                    Smart keycard, biometric, and cloud-based entry systems for secure, authorized access.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="service-card">
+                            <div class="card-arrow">
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="default-content">
+                                <div class="card-content">
+                                    <div class="card-icon">
+                                        <i class="fas fa-bullhorn"></i>
+                                    </div>
+                                    <h4 class="card-title">Public Announcement (PA) Systems</h4>
+                                </div>
+                            </div>
+                            <div class="hover-content">
+                                <p class="hover-text">
+                                    Two-way communication, LED signage, and digital clocks for clear, powerful announcements.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Managed IT Support -->
+                <div class="service-section">
+                    <div class="service-header">
+                        <div class="timeline-dot"></div>
+                        <h3 class="service-title">Managed IT Support</h3>
+                    </div>
+                    <p class="service-description">
+                        As your Managed Services Provider (MSP), we partner with you for reliable IT support that empowers your business to thrive in today's digital landscape.
+                    </p>
+
+                    <div class="service-cards">
+                        <div class="service-card">
+                            <div class="card-arrow">
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="default-content">
+                                <div class="card-content">
+                                    <div class="card-icon">
+                                        <i class="fas fa-chart-line"></i>
+                                    </div>
+                                    <h4 class="card-title">Proactive Monitoring and Maintenance</h4>
+                                </div>
+                            </div>
+                            <div class="hover-content">
+                                <p class="hover-text">
+                                    Continuous system monitoring and preventive maintenance to ensure optimal performance and minimize downtime.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="service-card">
+                            <div class="card-arrow">
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="default-content">
+                                <div class="card-content">
+                                    <div class="card-icon">
+                                        <i class="fas fa-headset"></i>
+                                    </div>
+                                    <h4 class="card-title">Help Desk / On-Demand Support</h4>
+                                </div>
+                            </div>
+                            <div class="hover-content">
+                                <p class="hover-text">
+                                    24/7 technical support and rapid response to resolve issues and keep your operations running smoothly.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="service-card">
+                            <div class="card-arrow">
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="default-content">
+                                <div class="card-content">
+                                    <div class="card-icon">
+                                        <i class="fas fa-shield-alt"></i>
+                                    </div>
+                                    <h4 class="card-title">Security First Approach</h4>
+                                </div>
+                            </div>
+                            <div class="hover-content">
+                                <p class="hover-text">
+                                    Comprehensive cybersecurity solutions including threat detection, data protection, and compliance management.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="service-card">
+                            <div class="card-arrow">
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="default-content">
+                                <div class="card-content">
+                                    <div class="card-icon">
+                                        <i class="fas fa-expand-arrows-alt"></i>
+                                    </div>
+                                    <h4 class="card-title">Scalability & Flexibility</h4>
+                                </div>
+                            </div>
+                            <div class="hover-content">
+                                <p class="hover-text">
+                                    Scalable solutions that grow with your business, whether you're a startup or enterprise — using cloud or on-prem infrastructure.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="service-card">
+                            <div class="card-arrow">
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="default-content">
+                                <div class="card-content">
+                                    <div class="card-icon">
+                                        <i class="fas fa-dollar-sign"></i>
+                                    </div>
+                                    <h4 class="card-title">Cost-Efficiency</h4>
+                                </div>
+                            </div>
+                            <div class="hover-content">
+                                <p class="hover-text">
+                                    Cut down IT costs with predictable monthly pricing and remove the burden of expensive in-house infrastructure.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="service-card">
+                            <div class="card-arrow">
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="default-content">
+                                <div class="card-content">
+                                    <div class="card-icon">
+                                        <i class="fas fa-cloud"></i>
+                                    </div>
+                                    <h4 class="card-title">Cloud Computing</h4>
+                                </div>
+                            </div>
+                            <div class="hover-content">
+                                <p class="hover-text">
+                                    Enable access to your data and applications anytime, anywhere with reliable, scalable cloud infrastructure.
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="gradient-bg"  >
+        <div class="container">
+            <h2 class="sections-title">About Us</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <p class="lead text-center text-white-50">
+                        Details Networks, formerly known as Mr. Tech Chicago, has been delivering high-quality, reliable tech solutions for both commercial and residential clients. At MTC Networks, we specialize in structured cabling, WiFi network setups, access control, security cameras, and audio systems.
+                    </p>
+                    <p class="lead text-center text-white-50">
+                        Our comprehensive, end-to-end approach ensures seamless integration and optimal performance across every project. Embracing innovation without compromising on the quality and reliability that our legacy is built upon, MTC Networks offers scalable, future-proof solutions that keep you connected and secure. Our dedicated team of professionals brings a wealth of experience and a commitment to excellence to every installation, ensuring that each project is executed with precision and care.
+                    </p>
+
+                    <!-- Overlapping iPad Frames Container -->
+                    <div class="ipad-frames-container mt-5">
+                        <!-- First iPad Frame (back/left) -->
+                        <div class="ipad-frame ipad-frame-1">
+                            <img src="/images/tabFrame.svg" alt="iPad Frame" class="ipad-svg">
+                            <div class="ipad-screen-content">
+                                <video autoplay muted loop class="ipad-media">
+                                    <source src="/images/12352337-hd_1920_1080_60fps.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                        </div>
+
+                        <!-- Second iPad Frame (front/right) -->
+                        <div class="ipad-frame ipad-frame-2">
+                            <img src="/images/tabFrame.svg" alt="iPad Frame" class="ipad-svg">
+                            <div class="ipad-screen-content">
+                                <video autoplay muted loop class="ipad-media">
+                                    <source src="/images/48420-453832153_small.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Why Choose Us Section -->
+    <section class="gradient-bg">
+        <div class="container">
+            <h2 class="sections-title">Why Choose Us</h2>
+            <!--here you have to put the elements for the two parts of the section(left and right) exactly as you described them for me -->
+        </div>
+    </section>
+
+<!--
+
+
+         <div class="padding-global">
+             <div class="container-large">
+                 <div class="padding-section-large">
+                     <div class="_2x1-grid-layout is-top-aligned">
+                         <div class="featuresv6_sticky-content"><div class="iphone-mockup"><div data-poster-url="https://cdn.prod.website-files.com/625e04df4f40a47f752b0623/66142026ff09fdcbca34380a_Video-poster-00001.jpg" data-video-urls="https://cdn.prod.website-files.com/625e04df4f40a47f752b0623/66142026ff09fdcbca34380a_Video-transcode.mp4,https://cdn.prod.website-files.com/625e04df4f40a47f752b0623/66142026ff09fdcbca34380a_Video-transcode.webm" data-autoplay="true" data-loop="true" data-wf-ignore="true" class="iphone-screen w-background-video w-background-video-atom"><video id="98e8e80f-c731-957c-aec6-48a7326fbe8a-video" autoplay="" loop="" style="background-image:url(&quot;https://cdn.prod.website-files.com/625e04df4f40a47f752b0623/66142026ff09fdcbca34380a_Video-poster-00001.jpg&quot;)" muted="" playsinline="" data-wf-ignore="true" data-object-fit="cover"><source src="https://cdn.prod.website-files.com/625e04df4f40a47f752b0623/66142026ff09fdcbca34380a_Video-transcode.mp4" data-wf-ignore="true"><source src="https://cdn.prod.website-files.com/625e04df4f40a47f752b0623/66142026ff09fdcbca34380a_Video-transcode.webm" data-wf-ignore="true"></video></div><img src="https://cdn.prod.website-files.com/625e04df4f40a47f752b0623/66141561fa732477bba6b3a6_iphone12-silver.svg" loading="lazy" alt="iPhone Frame" class="iphone-shape"></div></div><div id="w-node-_7eb52b87-e58a-dd55-d5f6-bcd7949dafae-13570b1f" class="featuresv6_sticky-container">
+                             <div class="featuresv6_sticky-div"><div class="lottie-animation" data-w-id="78448cfd-3fab-e90c-131a-41234394957f" data-animation-type="lottie" data-src="https://cdn.prod.website-files.com/625e04df4f40a47f752b0623/661d4b73c4a08054c61476ed_Animation%20-%201713195873008.json" data-loop="1" data-direction="1" data-autoplay="1" data-is-ix2-target="0" data-renderer="svg" data-default-duration="4.33767082766072" data-duration="5"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 800 800" width="800" height="800" preserveAspectRatio="xMidYMid meet" style="width: 100%; height: 100%; transform: translate3d(0px, 0px, 0px); content-visibility: visible;"><defs><clipPath id="__lottie_element_36"><rect width="800" height="800" x="0" y="0"></rect></clipPath></defs><g clip-path="url(#__lottie_element_36)"><g transform="matrix(1,0,0,1,343.4859924316406,512.5)" opacity="1" style="display: none;"><g opacity="1" transform="matrix(1,0,0,1,56.137001037597656,56.137001037597656)"><path fill="rgb(0,0,0)" fill-opacity="1" d=" M0,-55.887001037597656 C-30.850000381469727,-55.887001037597656 -55.887001037597656,-30.850000381469727 -55.887001037597656,0.0010000000474974513 C-55.887001037597656,30.850000381469727 -30.849000930786133,55.887001037597656 0,55.887001037597656 C30.849000930786133,55.887001037597656 55.887001037597656,30.850000381469727 55.887001037597656,0.0010000000474974513 C55.887001037597656,-30.850000381469727 30.849000930786133,-55.887001037597656 0,-55.887001037597656z"></path></g></g><g transform="matrix(1,0,0,1,261,399.3559875488281)" opacity="1" style="display: none;"><g opacity="1" transform="matrix(1,0,0,1,138.51499938964844,53.183998107910156)"><path fill="rgb(0,0,0)" fill-opacity="1" d=" M0,-52.933998107910156 C-49.553001403808594,-52.933998107910156 -96.33100128173828,-31.082000732421875 -128.3350067138672,7.013999938964844 C-138.26499938964844,18.825000762939453 -136.73699951171875,36.448001861572266 -124.90699768066406,46.37699890136719 C-119.6729965209961,50.77299880981445 -113.302001953125,52.933998107910156 -106.9489974975586,52.933998107910156 C-98.97599792480469,52.933998107910156 -91.05799865722656,49.54399871826172 -85.54399871826172,42.96799850463867 C-64.1760025024414,17.538999557495117 -32.992000579833984,2.9519999027252197 0,2.9519999027252197 C32.992000579833984,2.9519999027252197 64.177001953125,17.538999557495117 85.54399871826172,42.96799850463867 C91.0770034790039,49.5629997253418 98.99400329589844,52.933998107910156 106.9489974975586,52.933998107910156 C113.302001953125,52.933998107910156 119.6729965209961,50.79199981689453 124.90699768066406,46.37699890136719 C136.73699951171875,36.446998596191406 138.26400756835938,18.823999404907227 128.3350067138672,7.013999938964844 C96.33000183105469,-31.082000732421875 49.551998138427734,-52.933998107910156 0,-52.933998107910156z"></path></g></g><g transform="matrix(1,0,0,1,175.5,286.31298828125)" opacity="1" style="display: none;"><g opacity="1" transform="matrix(1,0,0,1,224.0679931640625,73.17400360107422)"><path fill="rgb(0,0,0)" fill-opacity="1" d=" M-0.008999999612569809,-72.92400360107422 C-82.55400085449219,-72.92400360107422 -160.4980010986328,-36.50400161743164 -213.88800048828125,27.003000259399414 C-223.81700134277344,38.81399917602539 -222.2899932861328,56.43600082397461 -210.4600067138672,66.36499786376953 C-205.2259979248047,70.76100158691406 -198.85499572753906,72.92400360107422 -192.5019989013672,72.92400360107422 C-184.5290069580078,72.92400360107422 -176.61099243164062,69.53199768066406 -171.0970001220703,62.95500183105469 C-128.38099670410156,12.118000030517578 -66.01200103759766,-17.035999298095703 -0.008999999612569809,-17.035999298095703 C65.99400329589844,-17.035999298095703 128.36300659179688,12.118000030517578 171.0970001220703,62.95500183105469 C176.63099670410156,69.5510025024414 184.5489959716797,72.92400360107422 192.5030059814453,72.92400360107422 C198.8560028076172,72.92400360107422 205.2270050048828,70.77999877929688 210.46200561523438,66.36499786376953 C222.29100036621094,56.43600082397461 223.8179931640625,38.79600143432617 213.88900756835938,27.003000259399414 C160.47999572753906,-36.50299835205078 82.53600311279297,-72.92400360107422 -0.008999999612569809,-72.92400360107422z"></path></g></g><g transform="matrix(1,0,0,1,92,174.5)" opacity="1" style="display: none;"><g opacity="1" transform="matrix(1,0,0,1,309.62298583984375,93.1719970703125)"><path fill="rgb(17,17,17)" fill-opacity="1" d=" M299.4410095214844,47.000999450683594 C224.7030029296875,-41.933998107910156 115.55400085449219,-92.9219970703125 0,-92.9219970703125 C-115.55599975585938,-92.9219970703125 -224.68499755859375,-41.933998107910156 -299.4440002441406,47.000999450683594 C-309.37298583984375,58.8120002746582 -307.84600830078125,76.43499755859375 -296.0159912109375,86.36399841308594 C-290.7820129394531,90.76000213623047 -284.4289855957031,92.9219970703125 -278.0769958496094,92.9219970703125 C-270.1029968261719,92.9219970703125 -262.18499755859375,89.53099822998047 -256.65399169921875,82.95500183105469 C-192.57000732421875,6.706999778747559 -99.01499938964844,-37.034000396728516 -0.0010000000474974513,-37.034000396728516 C99.01100158691406,-37.034000396728516 192.5659942626953,6.706999778747559 256.6499938964844,82.93699645996094 C262.1820068359375,89.51300048828125 270.0989990234375,92.90399932861328 278.0740051269531,92.90399932861328 C284.4259948730469,92.90399932861328 290.7969970703125,90.76100158691406 296.0320129394531,86.34600067138672 C307.8420104980469,76.43399810791016 309.37200927734375,58.792999267578125 299.4410095214844,47.000999450683594z"></path></g></g><g transform="matrix(1,0,0,1,343.4859924316406,512.5)" opacity="1" style="display: block;"><g opacity="1" transform="matrix(1,0,0,1,56.137001037597656,56.137001037597656)"><path fill="rgb(0,0,0)" fill-opacity="1" d=" M0,-55.887001037597656 C-30.850000381469727,-55.887001037597656 -55.887001037597656,-30.850000381469727 -55.887001037597656,0.0010000000474974513 C-55.887001037597656,30.850000381469727 -30.849000930786133,55.887001037597656 0,55.887001037597656 C30.849000930786133,55.887001037597656 55.887001037597656,30.850000381469727 55.887001037597656,0.0010000000474974513 C55.887001037597656,-30.850000381469727 30.849000930786133,-55.887001037597656 0,-55.887001037597656z"></path></g></g><g transform="matrix(1,0,0,1,261,399.3559875488281)" opacity="1" style="display: block;"><g opacity="1" transform="matrix(1,0,0,1,138.51499938964844,53.183998107910156)"><path fill="rgb(60,60,60)" fill-opacity="1" d=" M0,-52.933998107910156 C-49.553001403808594,-52.933998107910156 -96.33100128173828,-31.082000732421875 -128.3350067138672,7.013999938964844 C-138.26499938964844,18.825000762939453 -136.73699951171875,36.448001861572266 -124.90699768066406,46.37699890136719 C-119.6729965209961,50.77299880981445 -113.302001953125,52.933998107910156 -106.9489974975586,52.933998107910156 C-98.97599792480469,52.933998107910156 -91.05799865722656,49.54399871826172 -85.54399871826172,42.96799850463867 C-64.1760025024414,17.538999557495117 -32.992000579833984,2.9519999027252197 0,2.9519999027252197 C32.992000579833984,2.9519999027252197 64.177001953125,17.538999557495117 85.54399871826172,42.96799850463867 C91.0770034790039,49.5629997253418 98.99400329589844,52.933998107910156 106.9489974975586,52.933998107910156 C113.302001953125,52.933998107910156 119.6729965209961,50.79199981689453 124.90699768066406,46.37699890136719 C136.73699951171875,36.446998596191406 138.26400756835938,18.823999404907227 128.3350067138672,7.013999938964844 C96.33000183105469,-31.082000732421875 49.551998138427734,-52.933998107910156 0,-52.933998107910156z"></path></g></g><g transform="matrix(1,0,0,1,175.5,286.31298828125)" opacity="1" style="display: block;"><g opacity="1" transform="matrix(1,0,0,1,224.0679931640625,73.17400360107422)"><path fill="rgb(234,234,234)" fill-opacity="1" d=" M-0.008999999612569809,-72.92400360107422 C-82.55400085449219,-72.92400360107422 -160.4980010986328,-36.50400161743164 -213.88800048828125,27.003000259399414 C-223.81700134277344,38.81399917602539 -222.2899932861328,56.43600082397461 -210.4600067138672,66.36499786376953 C-205.2259979248047,70.76100158691406 -198.85499572753906,72.92400360107422 -192.5019989013672,72.92400360107422 C-184.5290069580078,72.92400360107422 -176.61099243164062,69.53199768066406 -171.0970001220703,62.95500183105469 C-128.38099670410156,12.118000030517578 -66.01200103759766,-17.035999298095703 -0.008999999612569809,-17.035999298095703 C65.99400329589844,-17.035999298095703 128.36300659179688,12.118000030517578 171.0970001220703,62.95500183105469 C176.63099670410156,69.5510025024414 184.5489959716797,72.92400360107422 192.5030059814453,72.92400360107422 C198.8560028076172,72.92400360107422 205.2270050048828,70.77999877929688 210.46200561523438,66.36499786376953 C222.29100036621094,56.43600082397461 223.8179931640625,38.79600143432617 213.88900756835938,27.003000259399414 C160.47999572753906,-36.50299835205078 82.53600311279297,-72.92400360107422 -0.008999999612569809,-72.92400360107422z"></path></g></g><g transform="matrix(1,0,0,1,92,174.5)" opacity="1" style="display: block;"><g opacity="1" transform="matrix(1,0,0,1,309.62298583984375,93.1719970703125)"><path fill="rgb(234,234,234)" fill-opacity="1" d=" M299.4410095214844,47.000999450683594 C224.7030029296875,-41.933998107910156 115.55400085449219,-92.9219970703125 0,-92.9219970703125 C-115.55599975585938,-92.9219970703125 -224.68499755859375,-41.933998107910156 -299.4440002441406,47.000999450683594 C-309.37298583984375,58.8120002746582 -307.84600830078125,76.43499755859375 -296.0159912109375,86.36399841308594 C-290.7820129394531,90.76000213623047 -284.4289855957031,92.9219970703125 -278.0769958496094,92.9219970703125 C-270.1029968261719,92.9219970703125 -262.18499755859375,89.53099822998047 -256.65399169921875,82.95500183105469 C-192.57000732421875,6.706999778747559 -99.01499938964844,-37.034000396728516 -0.0010000000474974513,-37.034000396728516 C99.01100158691406,-37.034000396728516 192.5659942626953,6.706999778747559 256.6499938964844,82.93699645996094 C262.1820068359375,89.51300048828125 270.0989990234375,92.90399932861328 278.0740051269531,92.90399932861328 C284.4259948730469,92.90399932861328 290.7969970703125,90.76100158691406 296.0320129394531,86.34600067138672 C307.8420104980469,76.43399810791016 309.37200927734375,58.792999267578125 299.4410095214844,47.000999450683594z"></path></g></g><g transform="matrix(1,0,0,1,343.4859924316406,512.5)" opacity="1" style="display: none;"><g opacity="1" transform="matrix(1,0,0,1,56.137001037597656,56.137001037597656)"><path fill="rgb(0,0,0)" fill-opacity="1" d=" M0,-55.887001037597656 C-30.850000381469727,-55.887001037597656 -55.887001037597656,-30.850000381469727 -55.887001037597656,0.0010000000474974513 C-55.887001037597656,30.850000381469727 -30.849000930786133,55.887001037597656 0,55.887001037597656 C30.849000930786133,55.887001037597656 55.887001037597656,30.850000381469727 55.887001037597656,0.0010000000474974513 C55.887001037597656,-30.850000381469727 30.849000930786133,-55.887001037597656 0,-55.887001037597656z"></path></g></g><g transform="matrix(1,0,0,1,261,399.3559875488281)" opacity="1" style="display: none;"><g opacity="1" transform="matrix(1,0,0,1,138.51499938964844,53.183998107910156)"><path fill="rgb(0,0,0)" fill-opacity="1" d=" M0,-52.933998107910156 C-49.553001403808594,-52.933998107910156 -96.33100128173828,-31.082000732421875 -128.3350067138672,7.013999938964844 C-138.26499938964844,18.825000762939453 -136.73699951171875,36.448001861572266 -124.90699768066406,46.37699890136719 C-119.6729965209961,50.77299880981445 -113.302001953125,52.933998107910156 -106.9489974975586,52.933998107910156 C-98.97599792480469,52.933998107910156 -91.05799865722656,49.54399871826172 -85.54399871826172,42.96799850463867 C-64.1760025024414,17.538999557495117 -32.992000579833984,2.9519999027252197 0,2.9519999027252197 C32.992000579833984,2.9519999027252197 64.177001953125,17.538999557495117 85.54399871826172,42.96799850463867 C91.0770034790039,49.5629997253418 98.99400329589844,52.933998107910156 106.9489974975586,52.933998107910156 C113.302001953125,52.933998107910156 119.6729965209961,50.79199981689453 124.90699768066406,46.37699890136719 C136.73699951171875,36.446998596191406 138.26400756835938,18.823999404907227 128.3350067138672,7.013999938964844 C96.33000183105469,-31.082000732421875 49.551998138427734,-52.933998107910156 0,-52.933998107910156z"></path></g></g><g transform="matrix(1,0,0,1,175.5,286.31298828125)" opacity="1" style="display: none;"><g opacity="1" transform="matrix(1,0,0,1,224.0679931640625,73.17400360107422)"><path fill="rgb(0,0,0)" fill-opacity="1" d=" M-0.008999999612569809,-72.92400360107422 C-82.55400085449219,-72.92400360107422 -160.4980010986328,-36.50400161743164 -213.88800048828125,27.003000259399414 C-223.81700134277344,38.81399917602539 -222.2899932861328,56.43600082397461 -210.4600067138672,66.36499786376953 C-205.2259979248047,70.76100158691406 -198.85499572753906,72.92400360107422 -192.5019989013672,72.92400360107422 C-184.5290069580078,72.92400360107422 -176.61099243164062,69.53199768066406 -171.0970001220703,62.95500183105469 C-128.38099670410156,12.118000030517578 -66.01200103759766,-17.035999298095703 -0.008999999612569809,-17.035999298095703 C65.99400329589844,-17.035999298095703 128.36300659179688,12.118000030517578 171.0970001220703,62.95500183105469 C176.63099670410156,69.5510025024414 184.5489959716797,72.92400360107422 192.5030059814453,72.92400360107422 C198.8560028076172,72.92400360107422 205.2270050048828,70.77999877929688 210.46200561523438,66.36499786376953 C222.29100036621094,56.43600082397461 223.8179931640625,38.79600143432617 213.88900756835938,27.003000259399414 C160.47999572753906,-36.50299835205078 82.53600311279297,-72.92400360107422 -0.008999999612569809,-72.92400360107422z"></path></g></g><g transform="matrix(1,0,0,1,92,174.5)" opacity="1" style="display: none;"><g opacity="1" transform="matrix(1,0,0,1,309.62298583984375,93.1719970703125)"><path fill="rgb(3,3,3)" fill-opacity="1" d=" M299.4410095214844,47.000999450683594 C224.7030029296875,-41.933998107910156 115.55400085449219,-92.9219970703125 0,-92.9219970703125 C-115.55599975585938,-92.9219970703125 -224.68499755859375,-41.933998107910156 -299.4440002441406,47.000999450683594 C-309.37298583984375,58.8120002746582 -307.84600830078125,76.43499755859375 -296.0159912109375,86.36399841308594 C-290.7820129394531,90.76000213623047 -284.4289855957031,92.9219970703125 -278.0769958496094,92.9219970703125 C-270.1029968261719,92.9219970703125 -262.18499755859375,89.53099822998047 -256.65399169921875,82.95500183105469 C-192.57000732421875,6.706999778747559 -99.01499938964844,-37.034000396728516 -0.0010000000474974513,-37.034000396728516 C99.01100158691406,-37.034000396728516 192.5659942626953,6.706999778747559 256.6499938964844,82.93699645996094 C262.1820068359375,89.51300048828125 270.0989990234375,92.90399932861328 278.0740051269531,92.90399932861328 C284.4259948730469,92.90399932861328 290.7969970703125,90.76100158691406 296.0320129394531,86.34600067138672 C307.8420104980469,76.43399810791016 309.37200927734375,58.792999267578125 299.4410095214844,47.000999450683594z"></path></g></g></g></svg></div><h4 class="heading-4">Next-gen Wi-Fi for supersonic speed</h4></div><div class="featuresv6_sticky-div is-second">
+                                 <img src="https://cdn.prod.website-files.com/625e04df4f40a47f752b0623/661dba55c21782a873e468f6_Professional.avif" loading="lazy" style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" data-w-id="2ac18efd-3744-8819-ea78-94abd14fe1bd" alt="Help Desk / On-Demand Support
+     " class="lottie-animation png"><h4 class="heading-4">Knowledgeable and experienced tech professionals providing excellent and timely support</h4>
+                             </div><div class="featuresv6_sticky-div is-third"><div class="lottie-animation" data-w-id="725350c9-7308-4ec4-8349-7b6fc5c62285" data-animation-type="lottie" data-src="https://cdn.prod.website-files.com/625e04df4f40a47f752b0623/661d4be06cd398ce5778d6e7_Tools.json" data-loop="1" data-direction="1" data-autoplay="1" data-is-ix2-target="0" data-renderer="svg" data-default-duration="5" data-duration="0"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" width="512" height="512" preserveAspectRatio="xMidYMid meet" style="width: 100%; height: 100%; transform: translate3d(0px, 0px, 0px); content-visibility: visible;"><defs><clipPath id="__lottie_element_20"><rect width="512" height="512" x="0" y="0"></rect></clipPath></defs><g clip-path="url(#__lottie_element_20)"><g transform="matrix(1,0,0,1,0,0)" opacity="1" style="display: block;"><g opacity="1" transform="matrix(1,0,0,1,256.2969970703125,270.27398681640625)"><path fill="rgb(0,0,0)" fill-opacity="1" d=" M62.50299835205078,-22.986000061035156 C61.10300064086914,-23.141000747680664 59.0260009765625,-23.062000274658203 57.15800094604492,-23.64900016784668 C54.52199935913086,-24.47599983215332 52.935001373291016,-23.573999404907227 51.10900115966797,-21.718000411987305 C12.491999626159668,17.56100082397461 -26.190000534057617,56.775001525878906 -64.86299896240234,95.99800109863281 C-73.22799682617188,104.48300170898438 -83.60199737548828,106.12000274658203 -93.72100067138672,100.56800079345703 C-100.72599792480469,96.7229995727539 -105.35600280761719,87.22699737548828 -104.572998046875,79.26699829101562 C-103.95899963378906,73.02300262451172 -101.18499755859375,68.09200286865234 -96.81099700927734,63.827999114990234 C-57.24700164794922,25.266000747680664 -17.704999923706055,-13.319999694824219 21.900999069213867,-51.8380012512207 C23.51300048828125,-53.404998779296875 24.006999969482422,-54.84400177001953 23.666000366210938,-57.00699996948242 C21.027000427246094,-73.79100036621094 26.735000610351562,-87.37699890136719 40.198001861572266,-97.43000030517578 C48.970001220703125,-103.9800033569336 59.16600036621094,-106.12000274658203 70.03099822998047,-104.39099884033203 C73.70800018310547,-103.80599975585938 76.47699737548828,-101.88099670410156 77.72699737548828,-98.1240005493164 C78.97100067138672,-94.38300323486328 77.94200134277344,-91.21299743652344 75.38099670410156,-88.48200225830078 C72.58899688720703,-85.50499725341797 69.7249984741211,-82.58699798583984 66.75399780273438,-79.78900146484375 C65.48600006103516,-78.59600067138672 65.08100128173828,-77.4540023803711 65.76200103759766,-75.8949966430664 C65.8280029296875,-75.74299621582031 65.87699890136719,-75.58200073242188 65.9219970703125,-75.4229965209961 C68.10600280761719,-67.7040023803711 68.0979995727539,-67.66699981689453 76.02300262451172,-66.08899688720703 C76.79499816894531,-65.93499755859375 77.9520034790039,-66.36799621582031 78.5510025024414,-66.93099975585938 C81.46299743652344,-69.6709976196289 84.26799774169922,-72.5260009765625 87.06600189208984,-75.38300323486328 C89.98400115966797,-78.36100006103516 93.36799621582031,-79.66999816894531 97.43199920654297,-78.20800018310547 C101.61799621582031,-76.7030029296875 103.25299835205078,-73.40599822998047 103.7300033569336,-69.16999816894531 C105.35600280761719,-54.68600082397461 100.68399810791016,-42.61800003051758 89.86900329589844,-32.9739990234375 C82.28199768066406,-26.20800018310547 73.20800018310547,-23.16200065612793 62.50299835205078,-22.986000061035156z M22.834999084472656,-18.099000930786133 C22.797000885009766,-21.910999298095703 20.73699951171875,-24.058000564575195 18.020000457763672,-23.542999267578125 C16.452999114990234,-23.2450008392334 14.817000389099121,-22.194000244140625 13.656000137329102,-21.03700065612793 C-17.191999435424805,9.715999603271484 -47.95800018310547,40.551998138427734 -78.81999969482422,71.29100036621094 C-82.22100067138672,74.67900085449219 -81.8030014038086,77.4530029296875 -80.11699676513672,79.3290023803711 C-78.1719970703125,81.49299621582031 -75.11799621582031,80.91899871826172 -72.12300109863281,77.92400360107422 C-54.04199981689453,59.845001220703125 -35.96200180053711,41.76499938964844 -17.881999969482422,23.684999465942383 C-5.1020002365112305,10.904999732971191 7.693999767303467,-1.8580000400543213 20.43000030517578,-14.682000160217285 C21.590999603271484,-15.850000381469727 22.357999801635742,-17.409000396728516 22.834999084472656,-18.099000930786133z"></path></g></g><g transform="matrix(0.3665083050727844,0.9304147958755493,-0.9304147958755493,0.3665083050727844,380.17095947265625,-266.4229736328125)" opacity="1" style="display: block;"><g opacity="1" transform="matrix(1,0,0,1,383.656005859375,144.45199584960938)"><path fill="rgb(0,0,0)" fill-opacity="1" d=" M20.836999893188477,0.11699999868869781 C20.836999893188477,3.0309998989105225 20.77400016784668,5.945000171661377 20.857999801635742,8.855999946594238 C20.917999267578125,10.92300033569336 20.051000595092773,12.378999710083008 18.326000213623047,13.366999626159668 C12.994000434875488,16.422000885009766 7.644000053405762,19.441999435424805 2.312000036239624,22.496999740600586 C0.7260000109672546,23.4060001373291 -0.7879999876022339,23.426000595092773 -2.3910000324249268,22.500999450683594 C-7.7129998207092285,19.43199920654297 -13.043999671936035,16.378999710083008 -18.408000946044922,13.385000228881836 C-20.136999130249023,12.420000076293945 -20.895999908447266,10.987000465393066 -20.90399932861328,9.11299991607666 C-20.929000854492188,3.0380001068115234 -20.923999786376953,-3.0369999408721924 -20.90399932861328,-9.112000465393066 C-20.898000717163086,-11.220000267028809 -19.868999481201172,-12.656999588012695 -18.01099967956543,-13.685999870300293 C-12.925999641418457,-16.500999450683594 -7.875,-19.375999450683594 -2.8519999980926514,-22.298999786376953 C-0.9269999861717224,-23.417999267578125 0.8379999995231628,-23.426000595092773 2.7639999389648438,-22.30699920654297 C7.789000034332275,-19.38800048828125 12.855999946594238,-16.538999557495117 17.920000076293945,-13.689000129699707 C19.91699981689453,-12.565999984741211 20.929000854492188,-10.972000122070312 20.857999801635742,-8.619999885559082 C20.770999908447266,-5.710000038146973 20.836999893188477,-2.7950000762939453 20.836999893188477,0.11699999868869781z M-11.373000144958496,-0.008999999612569809 C-13.211000442504883,5.236999988555908 -10.524999618530273,8.031999588012695 -5.999000072479248,9.76099967956543 C-5.921999931335449,9.789999961853027 -5.841000080108643,9.826000213623047 -5.78000020980835,9.880000114440918 C-1.9170000553131104,13.324999809265137 1.5219999551773071,12.491000175476074 5.883999824523926,10.041000366210938 C10.336999893188477,7.541999816894531 11.772000312805176,4.86299991607666 11.743000030517578,-0.16599999368190765 C11.71500015258789,-5.020999908447266 10.246000289916992,-7.519999980926514 6.056000232696533,-9.987000465393066 C1.5579999685287476,-12.633999824523926 -1.6380000114440918,-12.741999626159668 -6.114999771118164,-9.96500015258789 C-10.20300006866455,-7.429999828338623 -13.157999992370605,-5.229000091552734 -11.373000144958496,-0.008999999612569809z"></path></g></g><g transform="matrix(-0.11039529740810394,0.9938877820968628,-0.9938877820968628,-0.11039529740810394,517.820556640625,303.5050048828125)" opacity="1" style="display: block;"><g opacity="1" transform="matrix(1,0,0,1,128.37100219726562,395.1730041503906)"><path fill="rgb(0,0,0)" fill-opacity="1" d=" M20.910999298095703,-0.11999999731779099 C20.910999298095703,2.7109999656677246 20.88599967956543,5.541999816894531 20.91900062561035,8.373000144958496 C20.94700050354004,10.756999969482422 20.01099967956543,12.444999694824219 17.851999282836914,13.628000259399414 C12.89799976348877,16.340999603271484 7.99399995803833,19.148000717163086 3.125999927520752,22.013999938964844 C1.0540000200271606,23.233999252319336 -0.8410000205039978,23.334999084472656 -2.943000078201294,22.104000091552734 C-7.888000011444092,19.207000732421875 -12.880000114440918,16.38599967956543 -17.878000259399414,13.581999778747559 C-19.9689998626709,12.409000396728516 -20.947999954223633,10.788999557495117 -20.898000717163086,8.319000244140625 C-20.785999298095703,2.6579999923706055 -20.80299949645996,-3.00600004196167 -20.891000747680664,-8.666999816894531 C-20.926000595092773,-10.904999732971191 -20.132999420166016,-12.506999969482422 -18.20599937438965,-13.60200023651123 C-12.789999961853027,-16.68199920654297 -7.429999828338623,-19.867000579833984 -1.9279999732971191,-22.784000396728516 C-0.8880000114440918,-23.336000442504883 0.9520000219345093,-23.316999435424805 1.9989999532699585,-22.761999130249023 C7.499000072479248,-19.841999053955078 12.845000267028809,-16.636999130249023 18.2810001373291,-13.595000267028809 C20.187000274658203,-12.527999877929688 20.90999984741211,-10.927000045776367 20.90999984741211,-8.86299991607666 C20.910999298095703,-5.948999881744385 20.90999984741211,-3.0350000858306885 20.910999298095703,-0.11999999731779099z M11.343999862670898,-0.11900000274181366 C13.246000289916992,-5.482999801635742 10.013999938964844,-7.638999938964844 5.895999908447266,-10.166000366210938 C1.5829999446868896,-12.812000274658203 -1.4900000095367432,-12.708000183105469 -5.869999885559082,-10.199000358581543 C-10.26099967956543,-7.683000087738037 -11.855999946594238,-5.09499979019165 -11.767999649047852,-0.014999999664723873 C-11.6850004196167,4.7820000648498535 -10.383999824523926,7.375999927520752 -6.119999885559082,9.82800006866455 C-1.6339999437332153,12.407999992370605 1.5609999895095825,12.670999526977539 6.052999973297119,9.847000122070312 C10.095999717712402,7.304999828338623 13.135000228881836,5.1519999504089355 11.343999862670898,-0.11900000274181366z"></path></g></g><g transform="matrix(-0.4118094742298126,-0.9112699627876282,0.9112699627876282,-0.4118094742298126,156.42025756835938,790.381591796875)" opacity="1" style="display: block;"><g opacity="1" transform="matrix(1,0,0,1,330.23699951171875,343.9880065917969)"><path fill="rgb(0,0,0)" fill-opacity="1" d=" M-38.81399917602539,-62.89799880981445 C-36.167999267578125,-61.27399826049805 -33.61600112915039,-60.064998626708984 -31.5310001373291,-58.303001403808594 C-30.077999114990234,-57.07500076293945 -29.013999938964844,-56.65599822998047 -27.448999404907227,-57.71099853515625 C-27.111000061035156,-57.9379997253418 -26.71299934387207,-58.12200164794922 -26.316999435424805,-58.2140007019043 C-21.408000946044922,-59.35499954223633 -18.56800079345703,-61.801998138427734 -18.312999725341797,-67.4489974975586 C-18.1299991607666,-71.47899627685547 -14.031999588012695,-74.12899780273438 -9.652000427246094,-74.2030029296875 C-3.240000009536743,-74.30999755859375 3.177000045776367,-74.3270034790039 9.59000015258789,-74.2040023803711 C15.336999893188477,-74.09300231933594 19.07200050354004,-69.96499633789062 19.107999801635742,-63.630001068115234 C19.1200008392334,-61.606998443603516 19.718000411987305,-60.672000885009766 21.650999069213867,-60.0890007019043 C23.861000061035156,-59.42399978637695 25.982999801635742,-58.415000915527344 28.062000274658203,-57.388999938964844 C29.323999404907227,-56.76599884033203 30.111000061035156,-57.01900100708008 31.128999710083008,-57.91400146484375 C32.60499954223633,-59.21200180053711 34.16899871826172,-60.5629997253418 35.9379997253418,-61.34000015258789 C39.9640007019043,-63.108001708984375 43.4370002746582,-61.4900016784668 46.35100173950195,-58.7140007019043 C50.56800079345703,-54.696998596191406 54.685001373291016,-50.56800079345703 58.71900177001953,-46.3650016784668 C63.22200012207031,-41.672000885009766 63.18199920654297,-36.361000061035156 58.507999420166016,-31.655000686645508 C56.986000061035156,-30.125 56.874000549316406,-28.92099952697754 57.79600143432617,-27.143999099731445 C58.74800109863281,-25.30900001525879 59.6349983215332,-23.39299964904785 60.18000030517578,-21.40999984741211 C60.676998138427734,-19.60099983215332 61.57899856567383,-19.10700035095215 63.36199951171875,-19.09000015258789 C67.25199890136719,-19.054000854492188 70.90899658203125,-18.113000869750977 72.83000183105469,-14.3100004196167 C73.65799713134766,-12.668999671936035 74.13800048828125,-10.690999984741211 74.19300079345703,-8.848999977111816 C74.36399841308594,-3.1070001125335693 74.26300048828125,2.6440000534057617 74.25399780273438,8.392000198364258 C74.24299621582031,15.076000213623047 70.55500030517578,19 63.84199905395508,19.090999603271484 C61.62099838256836,19.121000289916992 60.37900161743164,19.719999313354492 60.02299880981445,21.927000045776367 C59.95800018310547,22.329999923706055 59.819000244140625,22.74799919128418 59.60900115966797,23.09600067138672 C57.159000396728516,27.145999908447266 56.69499969482422,30.617000579833984 60.58399963378906,34.53099822998047 C63.46500015258789,37.43000030517578 62.40800094604492,42.441001892089844 59.0260009765625,46.02199935913086 C54.79899978637695,50.49700164794922 50.474998474121094,54.902000427246094 45.95199966430664,59.07500076293945 C41.327999114990234,63.3390007019043 36.279998779296875,63.064998626708984 31.631999969482422,58.44499969482422 C30.18899917602539,57.01100158691406 29.003000259399414,56.654998779296875 27.356000900268555,57.762001037597656 C27.152000427246094,57.900001525878906 26.91200065612793,57.98500061035156 26.680999755859375,58.077999114990234 C24.3799991607666,59.013999938964844 21.43199920654297,59.37699890136719 19.961999893188477,61.04399871826172 C18.60700035095215,62.577999114990234 18.95599937438965,65.54499816894531 18.350000381469727,67.82599639892578 C17.340999603271484,71.62899780273438 13.902000427246094,74.16000366210938 9.553000450134277,74.22100067138672 C3.2239999771118164,74.31199645996094 -3.1089999675750732,74.3280029296875 -9.437999725341797,74.22000122070312 C-15.145999908447266,74.12300109863281 -18.97800064086914,70.1780014038086 -19.031999588012695,64.00700378417969 C-19.054000854492188,61.483001708984375 -19.91900062561035,60.34400177001953 -22.19700050354004,59.90399932861328 C-22.600000381469727,59.82600021362305 -23.018999099731445,59.694000244140625 -23.367000579833984,59.481998443603516 C-27.281999588012695,57.097999572753906 -30.583999633789062,56.680999755859375 -34.35100173950195,60.494998931884766 C-37.308998107910156,63.492000579833984 -42.37099838256836,62.44499969482422 -46.04600143432617,58.9640007019043 C-50.45500183105469,54.7869987487793 -54.78499984741211,50.512001037597656 -58.928001403808594,46.071998596191406 C-63.32500076293945,41.358001708984375 -63.095001220703125,36.3380012512207 -58.369998931884766,31.57699966430664 C-57.025001525878906,30.219999313354492 -56.60300064086914,29.12299919128418 -57.691001892089844,27.538000106811523 C-57.92100143432617,27.202999114990234 -58.0890007019043,26.798999786376953 -58.18299865722656,26.402999877929688 C-59.3650016784668,21.399999618530273 -61.88100051879883,18.447999954223633 -67.63899993896484,18.302000045776367 C-71.30500030517578,18.208999633789062 -74.08200073242188,14.100000381469727 -74.16999816894531,9.982999801635742 C-74.31199645996094,3.322999954223633 -74.36399841308594,-3.3480000495910645 -74.15599822998047,-10.005999565124512 C-73.98899841308594,-15.375 -69.75900268554688,-19.1299991607666 -63.926998138427734,-19.049999237060547 C-61.4900016784668,-19.017000198364258 -60.54999923706055,-19.934999465942383 -59.91400146484375,-22.025999069213867 C-59.3390007019043,-23.92099952697754 -58.59700012207031,-25.80500030517578 -57.63100051879883,-27.52899932861328 C-56.66699981689453,-29.24799919128418 -57.07600021362305,-30.277000427246094 -58.39099884033203,-31.5939998626709 C-59.64699935913086,-32.85300064086914 -60.736000061035156,-34.4370002746582 -61.41699981689453,-36.07899856567383 C-63.066001892089844,-40.051998138427734 -61.444000244140625,-43.430999755859375 -58.7400016784668,-46.26900100708008 C-54.66299819946289,-50.54600143432617 -50.55500030517578,-54.814998626708984 -46.15800094604492,-58.750999450683594 C-44.2140007019043,-60.49100112915039 -41.53099822998047,-61.40599822998047 -38.81399917602539,-62.89799880981445z M-43.96900177001953,-0.06800000369548798 C-43.96900177001953,24.18600082397461 -24.417999267578125,44.02399826049805 -0.5009999871253967,44.03900146484375 C24.11199951171875,44.05400085449219 44.0369987487793,24.555999755859375 44.04899978637695,0.4440000057220459 C44.060001373291016,-24.084999084472656 24.625999450683594,-43.74800109863281 0.6399999856948853,-44.03900146484375 C-24.10099983215332,-44.3390007019043 -44.23500061035156,-24.003000259399414 -43.96900177001953,-0.06800000369548798z"></path></g><g opacity="1" transform="matrix(1,0,0,1,330.27301025390625,343.9859924316406)"><path fill="rgb(0,0,0)" fill-opacity="1" d=" M-0.1770000010728836,34.749000549316406 C-19.385000228881836,34.729000091552734 -34.78099822998047,19.235000610351562 -34.779998779296875,-0.07500000298023224 C-34.77899932861328,-19.38599967956543 -19.23699951171875,-34.76900100708008 0.2370000034570694,-34.73500061035156 C19.36199951171875,-34.70100021362305 34.78099822998047,-19.07200050354004 34.733001708984375,0.23100000619888306 C34.685001373291016,19.415000915527344 19.1560001373291,34.76900100708008 -0.1770000010728836,34.749000549316406z M-20.798999786376953,-0.14300000667572021 C-20.798999786376953,-0.14300000667572021 -20.808000564575195,-0.14300000667572021 -20.808000564575195,-0.14300000667572021 C-20.808000564575195,2.3529999256134033 -20.83799934387207,4.848999977111816 -20.799999237060547,7.343999862670898 C-20.756000518798828,10.262999534606934 -19.70800018310547,12.704000473022461 -17.14299964904785,14.288999557495117 C-12.904999732971191,16.9060001373291 -8.6850004196167,19.552000045776367 -4.379000186920166,22.052000045776367 C-1.5099999904632568,23.718000411987305 1.5420000553131104,23.687000274658203 4.4029998779296875,22.014999389648438 C8.70199966430664,19.503000259399414 12.927000045776367,16.86400032043457 17.158000946044922,14.23900032043457 C19.634000778198242,12.70300006866455 20.704999923706055,10.324999809265137 20.738000869750977,7.508999824523926 C20.79800033569336,2.434999942779541 20.80699920654297,-2.6410000324249268 20.725000381469727,-7.714000225067139 C20.68199920654297,-10.338000297546387 19.604000091552734,-12.63700008392334 17.371000289916992,-14.057999610900879 C12.890999794006348,-16.906999588012695 8.331000328063965,-19.631999969482422 3.743000030517578,-22.304000854492188 C1.2599999904632568,-23.750999450683594 -1.3980000019073486,-23.716999053955078 -3.869999885559082,-22.270000457763672 C-8.45300006866455,-19.589000701904297 -13.015999794006348,-16.867000579833984 -17.486000061035156,-14.00100040435791 C-19.711000442504883,-12.576000213623047 -20.70400047302246,-10.253999710083008 -20.781999588012695,-7.629000186920166 C-20.85700035095215,-5.136000156402588 -20.798999786376953,-2.6389999389648438 -20.798999786376953,-0.14300000667572021z"></path></g></g><g transform="matrix(-0.9974312782287598,-0.07163026183843613,0.07163026183843613,-0.9974312782287598,340.49554443359375,395.46160888671875)" opacity="1" style="display: block;"><g opacity="1" transform="matrix(1,0,0,1,181.7550048828125,195.552001953125)"><path fill="rgb(0,0,0)" fill-opacity="1" d=" M38.84700012207031,62.80500030517578 C36.25400161743164,61.24100112915039 33.65700149536133,60.08399963378906 31.60700035095215,58.30099868774414 C30.05699920654297,56.95199966430664 28.97599983215332,56.80400085449219 27.273000717163086,57.67599868774414 C25.360000610351562,58.65599822998047 23.356000900268555,59.53099822998047 21.298999786376953,60.132999420166016 C19.61199951171875,60.62699890136719 19.131999969482422,61.48099899291992 19.104000091552734,63.15999984741211 C19.040000915527344,67.0270004272461 18.226999282836914,70.74400329589844 14.41100025177002,72.6780014038086 C12.699999809265137,73.54499816894531 10.644000053405762,74.05899810791016 8.723999977111816,74.12300109863281 C3.062999963760376,74.30899810791016 -2.6070001125335693,74.1989974975586 -8.27400016784668,74.18599700927734 C-15.13700008392334,74.1709976196289 -19.01099967956543,70.48600006103516 -19.089000701904297,63.61800003051758 C-19.11199951171875,61.62699890136719 -19.615999221801758,60.612998962402344 -21.60300064086914,60.05500030517578 C-23.663999557495117,59.47700119018555 -25.67099952697754,58.58399963378906 -27.569000244140625,57.57699966430664 C-29.1560001373291,56.736000061035156 -30.187999725341797,56.909000396728516 -31.43400001525879,58.222999572753906 C-34.21500015258789,61.15700149536133 -37.59000015258789,62.95600128173828 -41.68600082397461,61.45600128173828 C-43.56700134277344,60.76599884033203 -45.36000061035156,59.499000549316406 -46.83700180053711,58.1150016784668 C-50.72200012207031,54.47100067138672 -54.42599868774414,50.632999420166016 -58.176998138427734,46.84700012207031 C-63.279998779296875,41.69499969482422 -63.36899948120117,36.558998107910156 -58.32400131225586,31.413000106811523 C-57.10100173950195,30.166000366210938 -56.70600128173828,29.202999114990234 -57.61000061035156,27.56399917602539 C-58.64400100708008,25.684999465942383 -59.49300003051758,23.660999298095703 -60.099998474121094,21.604999542236328 C-60.66299819946289,19.695999145507812 -61.56700134277344,19.038000106811523 -63.6150016784668,19.018999099731445 C-67.39199829101562,18.982999801635742 -70.98799896240234,17.981000900268555 -72.8280029296875,14.244999885559082 C-73.64199829101562,12.592000007629395 -74.12899780273438,10.621000289916992 -74.18299865722656,8.779000282287598 C-74.35299682617188,3.0329999923706055 -74.25499725341797,-2.7179999351501465 -74.24299621582031,-8.468000411987305 C-74.2300033569336,-15.154000282287598 -70.54000091552734,-19.047000885009766 -63.79499816894531,-19.135000228881836 C-61.6879997253418,-19.163000106811523 -60.487998962402344,-19.69300079345703 -60.1150016784668,-21.795000076293945 C-60.02899932861328,-22.277999877929688 -59.861000061035156,-22.781999588012695 -59.60200119018555,-23.19499969482422 C-57.05400085449219,-27.256000518798828 -56.69499969482422,-30.731000900268555 -60.604000091552734,-34.604000091552734 C-63.43600082397461,-37.409000396728516 -62.48699951171875,-42.30099868774414 -59.137001037597656,-45.89400100708008 C-54.88199996948242,-50.45899963378906 -50.486000061035156,-54.91400146484375 -45.89400100708008,-59.138999938964844 C-41.22200012207031,-63.4370002746582 -36.2859992980957,-63.130001068115234 -31.573999404907227,-58.4640007019043 C-30.23200035095215,-57.1349983215332 -29.231000900268555,-56.8120002746582 -27.518999099731445,-57.71699905395508 C-25.47599983215332,-58.79800033569336 -23.277000427246094,-59.62200164794922 -21.075000762939453,-60.34600067138672 C-19.520999908447266,-60.85900115966797 -19.131000518798828,-61.73099899291992 -19.108999252319336,-63.2859992980957 C-19.006000518798828,-70.68900299072266 -15.303999900817871,-74.2959976196289 -7.978000164031982,-74.30000305175781 C-2.562000036239624,-74.3030014038086 2.8550000190734863,-74.30799865722656 8.272000312805176,-74.29900360107422 C15.128999710083008,-74.28800201416016 19.006999969482422,-70.60399627685547 19.089000701904297,-63.73400115966797 C19.113000869750977,-61.74700164794922 19.608999252319336,-60.72800064086914 21.597999572753906,-60.17100143432617 C23.65999984741211,-59.59400177001953 25.66900062561035,-58.702999114990234 27.56399917602539,-57.69300079345703 C29.150999069213867,-56.84600067138672 30.177000045776367,-57.018001556396484 31.427000045776367,-58.33100128173828 C34.132999420166016,-61.17399978637695 37.38800048828125,-63.04800033569336 41.433998107910156,-61.65999984741211 C43.2599983215332,-61.03300094604492 45.06999969482422,-59.926998138427734 46.47999954223633,-58.60499954223633 C50.608001708984375,-54.733001708984375 54.573001861572266,-50.683998107910156 58.525001525878906,-46.630001068115234 C63.165000915527344,-41.86899948120117 63.21699905395508,-36.4739990234375 58.48099899291992,-31.726999282836914 C56.94300079345703,-30.18600082397461 56.887001037597656,-28.974000930786133 57.779998779296875,-27.21500015258789 C58.715999603271484,-25.3700008392334 59.61800003051758,-23.459999084472656 60.15800094604492,-21.47599983215332 C60.65299987792969,-19.658000946044922 61.56800079345703,-19.173999786376953 63.34400177001953,-19.158000946044922 C67.23899841308594,-19.124000549316406 70.89199829101562,-18.173999786376953 72.81300354003906,-14.371999740600586 C73.64299774169922,-12.729000091552734 74.1259994506836,-10.75 74.18099975585938,-8.906000137329102 C74.35299682617188,-3.1610000133514404 74.25800323486328,2.5920000076293945 74.24099731445312,8.342000007629395 C74.22100067138672,15.017999649047852 70.51899719238281,18.93199920654297 63.79499816894531,19.02400016784668 C61.56399917602539,19.05500030517578 60.32699966430664,19.66200065612793 60.013999938964844,21.888999938964844 C59.96900177001953,22.211999893188477 59.84299850463867,22.54199981689453 59.67900085449219,22.825000762939453 C57.3129997253418,26.913999557495117 56.42499923706055,30.465999603271484 60.569000244140625,34.499000549316406 C63.50199890136719,37.35300064086914 62.39400100708008,42.36199951171875 58.979000091552734,45.97600173950195 C54.805999755859375,50.391998291015625 50.55799865722656,54.762001037597656 46.04899978637695,58.82400131225586 C44.16999816894531,60.51599884033203 41.529998779296875,61.36399841308594 38.84700012207031,62.80500030517578z M-44.012001037597656,-0.21699999272823334 C-44.01599884033203,24.07900047302246 -24.476999282836914,43.93899917602539 -0.5550000071525574,43.95600128173828 C24.166000366210938,43.972999572753906 44.000999450683594,24.56599998474121 44.012001037597656,0.34700000286102295 C44.02299880981445,-24.191999435424805 24.582000732421875,-44.05699920654297 0.5440000295639038,-44.06700134277344 C-24.298999786376953,-44.07699966430664 -44.00899887084961,-24.68000030517578 -44.012001037597656,-0.21699999272823334z"></path></g><g opacity="1" transform="matrix(1,0,0,1,181.7550048828125,195.50100708007812)"><path fill="rgb(0,0,0)" fill-opacity="1" d=" M-0.0020000000949949026,-34.749000549316406 C19.25,-34.749000549316406 34.74100112915039,-19.288000106811523 34.75199890136719,-0.06400000303983688 C34.76300048828125,19.319000244140625 19.295000076293945,34.75 -0.1289999932050705,34.73400115966797 C-19.332000732421875,34.71799850463867 -34.76300048828125,19.20400047302246 -34.76300048828125,-0.08399999886751175 C-34.76300048828125,-19.295000076293945 -19.264999389648438,-34.75 -0.0020000000949949026,-34.749000549316406z M20.80900001525879,0.032999999821186066 C20.80900001525879,0.032999999821186066 20.788000106811523,0.032999999821186066 20.788000106811523,0.032999999821186066 C20.788000106811523,-2.378999948501587 20.81399917602539,-4.791999816894531 20.7810001373291,-7.203999996185303 C20.739999771118164,-10.218000411987305 19.61199951171875,-12.723999977111816 17.003000259399414,-14.347999572753906 C12.706000328063965,-17.023000717163086 8.383000373840332,-19.656999588012695 4.015999794006348,-22.215999603271484 C1.371000051498413,-23.764999389648438 -1.4240000247955322,-23.75 -4.060999870300293,-22.202999114990234 C-8.498000144958496,-19.599000930786133 -12.89799976348877,-16.92799949645996 -17.25,-14.185999870300293 C-19.59000015258789,-12.711000442504883 -20.70400047302246,-10.375 -20.753999710083008,-7.671000003814697 C-20.84600067138672,-2.5980000495910645 -20.82200050354004,2.4779999256134033 -20.763999938964844,7.552000045776367 C-20.73200035095215,10.378000259399414 -19.621999740600586,12.729999542236328 -17.148000717163086,14.260000228881836 C-12.911999702453613,16.878000259399414 -8.6899995803833,19.523000717163086 -4.386000156402588,22.025999069213867 C-1.125,23.922000885009766 2.1489999294281006,23.44700050354004 5.288000106811523,21.55900001525879 C8.77299976348877,19.461999893188477 12.218000411987305,17.29400062561035 15.744999885559082,15.267999649047852 C19.354000091552734,13.194999694824219 21.04199981689453,10.182000160217285 20.82699966430664,6.021999835968018 C20.724000930786133,4.031000137329102 20.80900001525879,2.0299999713897705 20.80900001525879,0.032999999821186066z"></path></g></g></g></g><clipPath id="__lottie_element_10"><path d="M0,0 L500,0 L500,500 L0,500z"></path></clipPath><mask id="__lottie_element_9_1" mask-type="alpha"><use xlink:href="#__lottie_element_9"></use></mask><g id="__lottie_element_14"><g transform="matrix(1,0,0,1,250,250)" opacity="1" style="display: block;"><path fill="rgb(255,0,0)" fill-opacity="1" d=" M162.0970001220703,55.1619987487793 C162.0970001220703,55.1619987487793 -162.0970001220703,55.1619987487793 -162.0970001220703,55.1619987487793 C-162.0970001220703,55.1619987487793 -162.0970001220703,-133.9219970703125 -162.0970001220703,-133.9219970703125 C-162.0970001220703,-133.9219970703125 162.0970001220703,-133.9219970703125 162.0970001220703,-133.9219970703125 C162.0970001220703,-133.9219970703125 162.0970001220703,55.1619987487793 162.0970001220703,55.1619987487793z"></path><g opacity="1" transform="matrix(1,0,0,1,0,0)"><path stroke-linecap="round" stroke-linejoin="round" fill-opacity="0" stroke="rgb(18,19,49)" stroke-opacity="1" stroke-width="10.799999999999999" d=" M162.0970001220703,55.1619987487793 C162.0970001220703,55.1619987487793 -162.0970001220703,55.1619987487793 -162.0970001220703,55.1619987487793 C-162.0970001220703,55.1619987487793 -162.0970001220703,-133.9219970703125 -162.0970001220703,-133.9219970703125 C-162.0970001220703,-133.9219970703125 162.0970001220703,-133.9219970703125 162.0970001220703,-133.9219970703125 C162.0970001220703,-133.9219970703125 162.0970001220703,55.1619987487793 162.0970001220703,55.1619987487793z"></path></g></g></g><mask id="__lottie_element_14_1" mask-type="alpha"><use xlink:href="#__lottie_element_14"></use></mask></defs><g clip-path="url(#__lottie_element_4)"><g mask="url(#__lottie_element_9_1)" style="display: block;"><g filter="url(#__lottie_element_8)" transform="matrix(-0.4444584548473358,-2.3584861755371094,2.3584861755371094,-0.4444584548473358,271.9410095214844,270.4599914550781)" opacity="1"><g class="design" opacity="1" transform="matrix(1,0,0,1,0,0)"><path fill="rgb(30,30,32)" fill-opacity="1" d=" M0,-250 C137.97500610351562,-250 250,-137.97500610351562 250,0 C250,137.97500610351562 137.97500610351562,250 0,250 C-137.97500610351562,250 -250,137.97500610351562 -250,0 C-250,-137.97500610351562 -137.97500610351562,-250 0,-250z"></path></g><g class="design" opacity="1" transform="matrix(1,0,0,1,113.24199676513672,-118.88400268554688)"><path fill="rgb(30,30,32)" fill-opacity="1" d=" M0,-176.5 C97.47799682617188,-176.5 176.5,-97.47799682617188 176.5,0 C176.5,97.47799682617188 97.47799682617188,176.5 0,176.5 C-43.948001861572266,176.5 -74.39600372314453,142.4429931640625 -105.29000091552734,115.86900329589844 C-142.92100524902344,83.5 -176.5,53.53099822998047 -176.5,0 C-176.5,-97.47799682617188 -97.47799682617188,-176.5 0,-176.5z"></path></g></g></g><g style="display: none;"><path></path></g></g></svg></div><h4 class="heading-4">Expertise in modern, top-of-the-line tech devices and equipment</h4></div>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+         </div>
+
+
+-->
+    <!-- Customer Reviews Section -->
+    <section class="gradient-bg">
+        <div class="container">
+            <h2 class="sections-title">Customer Reviews</h2>
+            <div class="review-slider-container">
+                <button class="slider-nav prev" id="prevBtn">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <div class="review-cards-row" id="reviewsContainer">
+                    <div class="review-slide">
+                        <div class="review-card">
+                            <div class="review-stars">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <div class="review-text">Had Sharif and Mike wire and install for outdoor internet and repair some old shotty work.... <span class="review-readmore">Read more</span></div>
+                            <div class="review-footer">
+                                <span class="reviewer-name">Eric O.</span>
+                                <span class="review-date">June 10 on <span class="review-source">Yelp</span></span>
+                            </div>
+                        </div>
+                        <div class="review-card">
+                            <div class="review-stars">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <div class="review-text">Had Sharif and Mike wire and install for outdoor internet and repair some old shotty work.... <span class="review-readmore">Read more</span></div>
+                            <div class="review-footer">
+                                <span class="reviewer-name">Eric O.</span>
+                                <span class="review-date">June 10 on <span class="review-source">Yelp</span></span>
+                            </div>
+                        </div>
+                        <div class="review-card">
+                            <div class="review-stars">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <div class="review-text">Had Sharif and Mike wire and install for outdoor internet and repair some old shotty work.... <span class="review-readmore">Read more</span></div>
+                            <div class="review-footer">
+                                <span class="reviewer-name">Eric O.</span>
+                                <span class="review-date">June 10 on <span class="review-source">Yelp</span></span>
+                            </div>
+                        </div>
+                        <div class="review-card">
+                            <div class="review-stars">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <div class="review-text">Had Sharif and Mike wire and install for outdoor internet and repair some old shotty work.... <span class="review-readmore">Read more</span></div>
+                            <div class="review-footer">
+                                <span class="reviewer-name">Eric O.</span>
+                                <span class="review-date">June 10 on <span class="review-source">Yelp</span></span>
+                            </div>
+                        </div>
+                        <div class="review-card">
+                            <div class="review-stars">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <div class="review-text">I recently had the pleasure of working with Sharif from Mr. Tech Chicago to set up my... <span class="review-readmore">Read more</span></div>
+                            <div class="review-footer">
+                                <span class="reviewer-name">Jon H.</span>
+                                <span class="review-date">May 15 on <span class="review-source">Yelp</span></span>
+                            </div>
+                        </div>
+                        <div class="review-card">
+                            <div class="review-stars">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <div class="review-text">I recently had the pleasure of working with Sharif from Mr. Tech Chicago to set up my... <span class="review-readmore">Read more</span></div>
+                            <div class="review-footer">
+                                <span class="reviewer-name">B.N.</span>
+                                <span class="review-date">Nov 20, 2024 on <span class="review-source">Yelp</span></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="review-slide">
+                        <div class="review-card">
+                            <div class="review-stars">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <div class="review-text">Exceeded all requirements for residential IT service. No issues, highly recommended,... <span class="review-readmore">Read more</span></div>
+                            <div class="review-footer">
+                                <span class="reviewer-name">Alison G.</span>
+                                <span class="review-date">Nov 13, 2024 on <span class="review-source">Yelp</span></span>
+                            </div>
+                        </div>
+                        <div class="review-card">
+                            <div class="review-stars">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <div class="review-text">Professional service from start to finish. Sharif was punctual, knowledgeable, and efficient... <span class="review-readmore">Read more</span></div>
+                            <div class="review-footer">
+                                <span class="reviewer-name">Michael R.</span>
+                                <span class="review-date">Oct 28, 2024 on <span class="review-source">Google</span></span>
+                            </div>
+                        </div>
+                        <div class="review-card">
+                            <div class="review-stars">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <div class="review-text">Great experience with Mr. Tech Chicago. They solved our networking issues quickly and professionally... <span class="review-readmore">Read more</span></div>
+                            <div class="review-footer">
+                                <span class="reviewer-name">Sarah K.</span>
+                                <span class="review-date">Oct 15, 2024 on <span class="review-source">Yelp</span></span>
+                            </div>
+                        </div>
+                        <div class="review-card">
+                            <div class="review-stars">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <div class="review-text">Excellent technical support and customer service. Would definitely recommend to others... <span class="review-readmore">Read more</span></div>
+                            <div class="review-footer">
+                                <span class="reviewer-name">David L.</span>
+                                <span class="review-date">Sep 30, 2024 on <span class="review-source">Google</span></span>
+                            </div>
+                        </div>
+                        <div class="review-card">
+                            <div class="review-stars">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <div class="review-text">Outstanding service quality and attention to detail. Fixed our complex network setup perfectly... <span class="review-readmore">Read more</span></div>
+                            <div class="review-footer">
+                                <span class="reviewer-name">Lisa M.</span>
+                                <span class="review-date">Sep 20, 2024 on <span class="review-source">Yelp</span></span>
+                            </div>
+                        </div>
+                        <div class="review-card">
+                            <div class="review-stars">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <div class="review-text">Highly professional team with excellent communication throughout the entire process... <span class="review-readmore">Read more</span></div>
+                            <div class="review-footer">
+                                <span class="reviewer-name">James P.</span>
+                                <span class="review-date">Sep 10, 2024 on <span class="review-source">Google</span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="slider-nav next" id="nextBtn">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+            <div class="slider-indicators" id="indicators"></div>
+        </div>
+    </section>
+    <!-- Contact Section -->
+    <section class="gradient-bg" id="contact">
+        <div class="container">
+            <h2 class="sections-title">Contact Us</h2>
+            <div class="row justify-content-center w-100">
+                <div class="col-lg-10 p-5 rounded-4" style="background-color: rgba(9, 6, 80, 0.1); border:1px solid white;">
+                    <h6 class="sections-title" style="font-size:2.4rem;">Tell us about your commercial or residential project.</h6>
+                    <form id="contactForm">
+                        <div class="mb-3">
+                            <input type="text" class="form-control p-2 bg-glass fs-5" placeholder="Name *" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" class="form-control p-2 bg-glass fs-5" placeholder="Company Name" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="email" class="form-control p-2 bg-glass fs-5" placeholder="Email *" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="tel" class="form-control p-2 bg-glass fs-5" placeholder="Phone Number: *" required>
+                        </div>
+                        <div class="mb-3">
+                            <textarea class="form-control p-2 bg-glass fs-5" rows="3" placeholder="Please provide details regarding your IT request: *" required></textarea>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-lg btn-primary" style="background-color:#EB5336; border:none;">
+                                Submit
+                            </button>
+                        </div>
+                        <div id="formMessage" class="mt-3"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer style="background: var(--main-blue); color: var(--main-white); padding: 60px 0;">
+        <div class="container">
+            <div class="row align-items-start text-center text-md-start">
+                <!-- Logo & Social Icons -->
+                <div class="col-md-4 mb-4 mb-md-0 d-flex flex-column align-items-center justify-content-center">
+                  
+                        <img src="~/images/الشعار png.png" alt="MTC Networks Logo" style="width: 180px;">
+                        <div class="d-flex justify-content-center justify-content-md-start gap-3">
+                            <div class="d-flex justify-content-center justify-content-md-start gap-4 mt-2">
+                                <a href="#" target="_blank" class="icon-wrapper">
+                                    <div class="inner-circle"></div>
+                                    <div class="inner-square"></div>
+                                    <i class="fab fa-whatsapp icon-font"></i>
+                                </a>
+                                <a href="#" target="_blank" class="icon-wrapper">
+                                    <div class="inner-circle"></div>
+                                    <div class="inner-square"></div>
+                                <i class="fab fa-envelope-open icon-font"></i>
+                                </a>
+                                <a href="#" target="_blank" class="icon-wrapper">
+                                    <div class="inner-circle"></div>
+                                    <div class="inner-square"></div>
+                                    <i class="fab fa-linkedin icon-font"></i>
+                                </a>
+                                <a href="#" target="_blank" class="icon-wrapper">
+                                    <div class="inner-circle"></div>
+                                    <div class="inner-square"></div>
+                                    <i class="fab fa-instagram icon-font"></i>
+                                </a>
+                            </div>
+
+
+                        </div>
+                  
+                </div>
+
+                <!-- Navigation Links -->
+                <div class="col-md-4 mb-4 mb-md-0 d-flex align-items-center justify-content-center">
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-underline">Contact Us</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-underline">About MTC Networks</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-underline">Solutions & Installations</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-underline">Our Clients</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-underline">Managed IT Support</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-underline">Remote Support</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-underline">FAQs</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="col-md-4 d-flex align-items-center justify-content-center">
+                   <div>
+                        <p class="fw-bold mb-1">MTC Networks<sup>™</sup> LLC</p>
+                        <p class="mb-1">Call/Text: <a href="tel:7738175966" class="text-white text-decoration-underline">773-817-5966</a></p>
+                        <p class="mb-0"><a href="mailto:connect@mtcnetworks.com" class="text-white text-decoration-underline">connect@mtcnetworks.com</a></p>
+                   </div>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="text-center mt-5">
+                <small class="text-white">
+                    © 2025 MTC Networks<sup>™</sup> LLC. All rights reserved.
+                    <a href="#" class="text-white text-decoration-underline">Privacy Policy</a>.
+                </small>
+            </div>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    <script>
+        class ReviewSlider {
+            constructor() {
+                this.container = document.getElementById('reviewsContainer');
+                this.prevBtn = document.getElementById('prevBtn');
+                this.nextBtn = document.getElementById('nextBtn');
+                this.indicatorsContainer = document.getElementById('indicators');
+                this.slides = this.container.querySelectorAll('.review-slide');
+                this.currentIndex = 0;
+                this.maxIndex = this.slides.length - 1;
+
+                this.init();
+            }
+
+            init() {
+                this.createIndicators();
+                this.updateSlider();
+                this.bindEvents();
+            }
+
+            createIndicators() {
+                this.indicatorsContainer.innerHTML = '';
+
+                for (let i = 0; i < this.slides.length; i++) {
+                    const indicator = document.createElement('div');
+                    indicator.className = 'indicator';
+                    indicator.addEventListener('click', () => this.goToSlide(i));
+                    this.indicatorsContainer.appendChild(indicator);
+                }
+            }
+
+            updateSlider() {
+                const translateX = -this.currentIndex * 100;
+                this.container.style.transform = `translateX(${translateX}%)`;
+
+                // Update navigation buttons
+                this.prevBtn.disabled = this.currentIndex === 0;
+                this.nextBtn.disabled = this.currentIndex >= this.maxIndex;
+
+                // Update indicators
+                const indicators = this.indicatorsContainer.querySelectorAll('.indicator');
+                indicators.forEach((indicator, index) => {
+                    indicator.classList.toggle('active', index === this.currentIndex);
+                });
+            }
+
+            goToSlide(slideIndex) {
+                this.currentIndex = Math.max(0, Math.min(slideIndex, this.maxIndex));
+                this.updateSlider();
+            }
+
+            nextSlide() {
+                if (this.currentIndex < this.maxIndex) {
+                    this.currentIndex++;
+                    this.updateSlider();
+                }
+            }
+
+            prevSlide() {
+                if (this.currentIndex > 0) {
+                    this.currentIndex--;
+                    this.updateSlider();
+                }
+            }
+
+            bindEvents() {
+                this.prevBtn.addEventListener('click', () => this.prevSlide());
+                this.nextBtn.addEventListener('click', () => this.nextSlide());
+
+                // Touch/swipe support
+                let startX = 0;
+                let endX = 0;
+
+                this.container.addEventListener('touchstart', (e) => {
+                    startX = e.touches[0].clientX;
+                });
+
+                this.container.addEventListener('touchend', (e) => {
+                    endX = e.changedTouches[0].clientX;
+                    const diff = startX - endX;
+
+                    if (Math.abs(diff) > 50) {
+                        if (diff > 0) {
+                            this.nextSlide();
+                        } else {
+                            this.prevSlide();
+                        }
+                    }
+                });
+
+                // Keyboard navigation
+                document.addEventListener('keydown', (e) => {
+                    if (e.key === 'ArrowLeft') {
+                        this.prevSlide();
+                    } else if (e.key === 'ArrowRight') {
+                        this.nextSlide();
+                    }
+                });
+            }
+        }
+
+        // Initialize slider when DOM is loaded
+        document.addEventListener('DOMContentLoaded', () => {
+            new ReviewSlider();
+        });
+    </script>
+    </body>
+
+</html>
+<script>
+    // Simple form handler
+    const form = document.getElementById('contactForm');
+    if (form) {
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+            document.getElementById('formMessage').innerHTML = '<div class="alert alert-success">Thank you! We will contact you soon to schedule your free consultation!</div>';
+            form.reset();
+        });
+    }
+</script>
+
+
