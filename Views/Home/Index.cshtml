@@ -12,7 +12,65 @@
     <link rel="stylesheet" href="~/DetailsNetworks.styles.css" asp-append-version="true" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-   
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .toast {
+            background: rgba(255, 255, 255, 0.05);
+            border-left: 5px solid var(--main-orange);
+            font-size: 1rem;
+        }
+
+        .contact-forms-container {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+}
+
+.contact-form-left,
+.contact-form-right {
+    flex: 1;
+}
+
+.form-wrapper {
+    background-color: rgba(9, 6, 80, 0.1);
+    border: 1px solid white;
+    border-radius: 1rem;
+    padding: 2rem;
+}
+
+.form-title {
+    font-size: 1.8rem;
+    color: white;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+/* Star rating styles */
+#starRating i {
+    color: rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+    transition: color 0.2s ease;
+    font-size: 3rem;
+}
+
+#starRating i.active,
+#starRating i:hover {
+    color: var(--main-orange);
+}
+
+/* Mobile responsiveness */
+@@media (max-width: 768px) {
+    .contact-forms-container {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    
+    .form-title {
+        font-size: 1.5rem;
+    }
+}
+    </style>
 </head>
 
     <body>
@@ -22,7 +80,7 @@
         <!-- Top contact info bar -->
         <div class="container-fluid py-1 px-3 d-none d-lg-flex justify-content-end">
             <div class="me-3" style="color:#fff; font-size:1rem; font-weight:600;">
-                077 777 7777
+                079 009 0914
             </div>
             <div class="me-2" style="color:#fff; font-size:0.95rem;">
                 ibrahim@detailsnetworks.com
@@ -79,7 +137,7 @@
             </p>
             <div class="hero-icons mb-4">
                 <a href="#faqs" class="hero-icon-link"><span class="me-1">&#x2753;</span> FAQs</a>
-                <a href="#why" class="hero-icon-link"><span class="me-1">&#x2B50;</span> Why MTC Networks</a>
+                <a href="#why" class="hero-icon-link"><span class="me-1">&#x2B50;</span> Why Details Networks</a>
                 <a href="#reviews" class="hero-icon-link"><span class="me-1">&#x1F31F;</span> Customer Reviews</a>
                 <a href="#connect" class="hero-icon-link"><span class="me-1">&#x2709;&#xFE0F;</span> Let's Connect</a>
             </div>
@@ -88,6 +146,7 @@
         </div>
     </section>
 
+    <!-- Services Section -->
     <section class="services-section gradient-bg">
         <div class="container">
             <h2 class="sections-title">Our Services</h2>
@@ -394,6 +453,7 @@
             </div>
         </div>
     </section>
+
     <!-- Why Choose Us Section -->
     <section class="gradient-bg">
         <div class="container">
@@ -402,7 +462,7 @@
         </div>
     </section>
 
-<!--
+    <!--
 
 
          <div class="padding-global">
@@ -422,11 +482,24 @@
 
 
 -->
-    <!-- Customer Reviews Section -->
+
+    <!-- Customer Reviews Section
     <section class="gradient-bg">
         <div class="container">
-            <h2 class="sections-title">Customer Reviews</h2>
+             <div class="position-relative mb-4">
+                 <h2 class="sections-title text-center mb-0" style="padding-bottom: 45px;">
+                     Customer Reviews
+                 </h2>
+                 <button class="btn btn-sm btn-primary position-absolute p-2 end-0"
+                         style="background-color: var(--main-orange); top:65%; border: none; font-size:1.2rem;"
+                         data-bs-toggle="modal" data-bs-target="#reviewModal">
+                     Write Your Review
+                 </button>
+             </div>
+
+
             <div class="review-slider-container">
+              
                 <button class="slider-nav prev" id="prevBtn">
                     <i class="fas fa-chevron-left"></i>
                 </button>
@@ -561,45 +634,133 @@
                 </button>
             </div>
             <div class="slider-indicators" id="indicators"></div>
+         
+
         </div>
     </section>
+
+
+     -->
+
+    <!-- Customer Reviews Section -->
+    <section class="gradient-bg">
+        <div class="container">
+            <h2 class="sections-title">Customer Reviews</h2>
+            <div class="review-slider-container">
+                <button class="slider-nav prev" id="prevBtn">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <div class="review-cards-row" id="reviewsContainer">
+                    <div class="review-slide">
+                        <div class="review-card">
+                            <div class="review-stars">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <div class="review-text">Had Sharif and Mike wire and install for outdoor internet and repair some old shotty work.... <span class="review-readmore">Read more</span></div>
+                            <div class="review-footer">
+                                <span class="reviewer-name">Eric O.</span>
+                                <span class="review-date">June 10 on <span class="review-source">Yelp</span></span>
+                            </div>
+                        </div>
+                        <div class="review-card">
+                            <div class="review-stars">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <div class="review-text">Had Sharif and Mike wire and install for outdoor internet and repair some old shotty work.... <span class="review-readmore">Read more</span></div>
+                            <div class="review-footer">
+                                <span class="reviewer-name">Eric O.</span>
+                                <span class="review-date">June 10 on <span class="review-source">Yelp</span></span>
+                            </div>
+                        </div>
+
+                    </div>
+                   
+                    <div class="review-slide">
+                       <!-- if there are more than 6 cards in the above review slide then create this (each review slide should have only 6 cards ) -->
+                    </div>
+                </div>
+                <!-- if there is only one review slide then the left and right arrows should not appear-->
+                <button class="slider-nav next" id="nextBtn">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+            <div class="slider-indicators" id="indicators"></div>
+        </div>
+    </section>
+
     <!-- Contact Section -->
     <section class="gradient-bg" id="contact">
         <div class="container">
             <h2 class="sections-title">Contact Us</h2>
-            <div class="row justify-content-center w-100">
-                <div class="col-lg-10 p-5 rounded-4" style="background-color: rgba(9, 6, 80, 0.1); border:1px solid white;">
-                    <h6 class="sections-title" style="font-size:2.4rem;">Tell us about your commercial or residential project.</h6>
-                    <form id="contactForm">
-                        <div class="mb-3">
-                            <input type="text" class="form-control p-2 bg-glass fs-5" placeholder="Name *" required>
-                        </div>
-                        <div class="mb-3">
-                            <input type="text" class="form-control p-2 bg-glass fs-5" placeholder="Company Name" required>
-                        </div>
-                        <div class="mb-3">
-                            <input type="email" class="form-control p-2 bg-glass fs-5" placeholder="Email *" required>
-                        </div>
-                        <div class="mb-3">
-                            <input type="tel" class="form-control p-2 bg-glass fs-5" placeholder="Phone Number: *" required>
-                        </div>
-                        <div class="mb-3">
-                            <textarea class="form-control p-2 bg-glass fs-5" rows="3" placeholder="Please provide details regarding your IT request: *" required></textarea>
-                        </div>
-                        <div class="text-center">
-                            <button type="submit" class="btn btn-lg btn-primary" style="background-color:#EB5336; border:none;">
-                                Submit
-                            </button>
-                        </div>
-                        <div id="formMessage" class="mt-3"></div>
-                    </form>
+            <div class="contact-forms-container">
+               
+                <!-- Review Form - Right Side -->
+                <div class="contact-form-right">
+                    <div class="form-wrapper">
+                        <h6 class="form-title">Share Your Experience</h6>
+                        <form id="reviewForm">
+                            <div class="mb-3">
+                                <label class="form-label">Rating *</label><br>
+                                <div id="starRating" class="text-warning fs-4">
+                                    <i class="fas fa-star" data-value="1"></i>
+                                    <i class="fas fa-star" data-value="2"></i>
+                                    <i class="fas fa-star" data-value="3"></i>
+                                    <i class="fas fa-star" data-value="4"></i>
+                                    <i class="fas fa-star" data-value="5"></i>
+                                </div>
+                                <input type="hidden" id="reviewRating" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="reviewerName" class="form-label">Your Name *</label>
+                                <input type="text" class="form-control p-2 bg-glass fs-5" id="reviewerName" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="reviewText" class="form-label">Your Review *</label>
+                                <textarea class="form-control p-2 bg-glass fs-5" id="reviewText" rows="4" required></textarea>
+                            </div>
+                           
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-lg" style="background-color: var(--main-orange); color: var(--main-white);">Submit Review</button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
+
+                <!-- Contact Form - Left Side -->
+                <div class="contact-form-left">
+                    <div class="form-wrapper">
+                        <h6 class="form-title">Tell us about your commercial or residential project.</h6>
+                        <form id="contactForm">
+                            <div class="mb-3">
+                                <input type="text" name="name" class="form-control p-2 bg-glass fs-5" placeholder="Name *" required>
+                            </div>
+                            <div class="mb-3">
+                                <input type="text" name="companyName" class="form-control p-2 bg-glass fs-5" placeholder="Company Name">
+                            </div>
+                            <div class="mb-3">
+                                <input type="email" name="email" class="form-control p-2 bg-glass fs-5" placeholder="Email *" required>
+                            </div>
+                            <div class="mb-3">
+                                <input type="tel" name="phoneNumber" class="form-control p-2 bg-glass fs-5" placeholder="Phone Number: *" required>
+                            </div>
+                            <div class="mb-3">
+                                <textarea name="message" class="form-control p-2 bg-glass fs-5" rows="3" placeholder="Please provide details regarding your IT request: *" required></textarea>
+                            </div>
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-lg btn-primary" style="background-color:#EB5336; border:none;">
+                                    Submit
+                                </button>
+                            </div>
+                            <div id="formMessage" class="mt-3"></div>
+                        </form>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
-
-
-    <footer style="background: var(--main-blue); color: var(--main-white); padding: 60px 0;">
+    <!-- Footer -->
+    <footer style="background: var(--main-blue); color: var(--main-white); padding-top: 80px; padding-bottom:5px;">
         <div class="container">
             <div class="row align-items-start text-center text-md-start">
                 <!-- Logo & Social Icons -->
@@ -659,7 +820,7 @@
             </div>
 
             <!-- Footer Bottom -->
-            <div class="text-center mt-5">
+            <div class="text-center mt-5 pt-5">
                 <small class="text-white">
                     © 2025 MTC Networks<sup>™</sup> LLC. All rights reserved.
                     <a href="#" class="text-white text-decoration-underline">Privacy Policy</a>.
@@ -668,129 +829,65 @@
         </div>
     </footer>
 
+    <!-- Success Message -->
+    <div class="position-fixed top-0 end-0 p-3" style="z-index: 1080;">
+        <div id="liveToast" class="toast align-items-center text-white" role="alert" aria-live="assertive" aria-atomic="true" style="background-color: var(--main-blue);">
+            <div class="d-flex">
+                <div class="toast-body" id="toastBody">
+                    <!-- message will be injected here -->
+                </div>
+                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="reviewModal" tabindex="-1" aria-labelledby="reviewModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content bg-glass">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="reviewModalLabel">Write a Review</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <form id="reviewForm">
+                    <div class="modal-body">
+                        <div class="mb-3">
+                            <label for="reviewerName" class="form-label">Your Name *</label>
+                            <input type="text" class="form-control" id="reviewerName" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="reviewText" class="form-label">Your Review *</label>
+                            <textarea class="form-control" id="reviewText" rows="4" required></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Rating *</label><br>
+                            <div id="starRating" class="text-warning fs-4">
+                                <!-- Interactive stars -->
+                                <i class="fas fa-star" data-value="1"></i>
+                                <i class="fas fa-star" data-value="2"></i>
+                                <i class="fas fa-star" data-value="3"></i>
+                                <i class="fas fa-star" data-value="4"></i>
+                                <i class="fas fa-star" data-value="5"></i>
+                            </div>
+                            <input type="hidden" id="reviewRating" required>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn" style="background-color: var(--main-orange); color: var(--main-white);">Submit Review</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Bootstrap JS Bundle (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
     <script src="~/js/site.js" asp-append-version="true"></script>
-
-    <script>
-        class ReviewSlider {
-            constructor() {
-                this.container = document.getElementById('reviewsContainer');
-                this.prevBtn = document.getElementById('prevBtn');
-                this.nextBtn = document.getElementById('nextBtn');
-                this.indicatorsContainer = document.getElementById('indicators');
-                this.slides = this.container.querySelectorAll('.review-slide');
-                this.currentIndex = 0;
-                this.maxIndex = this.slides.length - 1;
-
-                this.init();
-            }
-
-            init() {
-                this.createIndicators();
-                this.updateSlider();
-                this.bindEvents();
-            }
-
-            createIndicators() {
-                this.indicatorsContainer.innerHTML = '';
-
-                for (let i = 0; i < this.slides.length; i++) {
-                    const indicator = document.createElement('div');
-                    indicator.className = 'indicator';
-                    indicator.addEventListener('click', () => this.goToSlide(i));
-                    this.indicatorsContainer.appendChild(indicator);
-                }
-            }
-
-            updateSlider() {
-                const translateX = -this.currentIndex * 100;
-                this.container.style.transform = `translateX(${translateX}%)`;
-
-                // Update navigation buttons
-                this.prevBtn.disabled = this.currentIndex === 0;
-                this.nextBtn.disabled = this.currentIndex >= this.maxIndex;
-
-                // Update indicators
-                const indicators = this.indicatorsContainer.querySelectorAll('.indicator');
-                indicators.forEach((indicator, index) => {
-                    indicator.classList.toggle('active', index === this.currentIndex);
-                });
-            }
-
-            goToSlide(slideIndex) {
-                this.currentIndex = Math.max(0, Math.min(slideIndex, this.maxIndex));
-                this.updateSlider();
-            }
-
-            nextSlide() {
-                if (this.currentIndex < this.maxIndex) {
-                    this.currentIndex++;
-                    this.updateSlider();
-                }
-            }
-
-            prevSlide() {
-                if (this.currentIndex > 0) {
-                    this.currentIndex--;
-                    this.updateSlider();
-                }
-            }
-
-            bindEvents() {
-                this.prevBtn.addEventListener('click', () => this.prevSlide());
-                this.nextBtn.addEventListener('click', () => this.nextSlide());
-
-                // Touch/swipe support
-                let startX = 0;
-                let endX = 0;
-
-                this.container.addEventListener('touchstart', (e) => {
-                    startX = e.touches[0].clientX;
-                });
-
-                this.container.addEventListener('touchend', (e) => {
-                    endX = e.changedTouches[0].clientX;
-                    const diff = startX - endX;
-
-                    if (Math.abs(diff) > 50) {
-                        if (diff > 0) {
-                            this.nextSlide();
-                        } else {
-                            this.prevSlide();
-                        }
-                    }
-                });
-
-                // Keyboard navigation
-                document.addEventListener('keydown', (e) => {
-                    if (e.key === 'ArrowLeft') {
-                        this.prevSlide();
-                    } else if (e.key === 'ArrowRight') {
-                        this.nextSlide();
-                    }
-                });
-            }
-        }
-
-        // Initialize slider when DOM is loaded
-        document.addEventListener('DOMContentLoaded', () => {
-            new ReviewSlider();
-        });
-    </script>
+    <script src="~/js/index.js" asp-append-version="true"></script>
     </body>
 
 </html>
-<script>
-    // Simple form handler
-    const form = document.getElementById('contactForm');
-    if (form) {
-        form.addEventListener('submit', function (e) {
-            e.preventDefault();
-            document.getElementById('formMessage').innerHTML = '<div class="alert alert-success">Thank you! We will contact you soon to schedule your free consultation!</div>';
-            form.reset();
-        });
-    }
-</script>
-
-

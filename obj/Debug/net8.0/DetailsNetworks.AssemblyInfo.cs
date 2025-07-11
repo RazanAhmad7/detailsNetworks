@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DetailsNetworks")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fe7c24e40c4b31f6951b16e7722300958d96414e")]
 [assembly: System.Reflection.AssemblyProductAttribute("DetailsNetworks")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DetailsNetworks")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -487,6 +487,10 @@ html {
         transform: translateY(-50%) scale(0.9);
     }
 
+    .slider-nav.hidden {
+        display: none;
+    }
+
 /* Slider Indicators */
 .slider-indicators {
     display: flex;
@@ -725,3 +729,4 @@ html {
 .icon-wrapper:hover .inner-square {
     transform: rotate(90deg) scale(1.1);
 }
+
