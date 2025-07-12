@@ -153,7 +153,8 @@ html {
   font-size: 3rem;
   font-weight: 700;
   text-align: center;
-  margin-bottom: 40px;
+  padding-bottom: 40px;
+  padding-top: 20px;
 }
 
 .timeline-container {
@@ -511,7 +512,55 @@ html {
     .indicator.active {
         background: #00e676;
     }
+.contact-forms-container {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+}
 
+.contact-form-left,
+.contact-form-right {
+    flex: 1;
+}
+
+.form-wrapper {
+    background-color: rgba(9, 6, 80, 0.1);
+    border: 1px solid white;
+    border-radius: 1rem;
+    padding: 2rem;
+}
+
+.form-title {
+    font-size: 1.8rem;
+    color: white;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+/* Star rating styles */
+#starRating i {
+    color: rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+    transition: color 0.2s ease;
+    font-size: 3rem;
+}
+
+    #starRating i.active,
+    #starRating i:hover {
+        color: var(--main-orange);
+    }
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .contact-forms-container {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .form-title {
+        font-size: 1.5rem;
+    }
+}
 
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
@@ -677,6 +726,146 @@ html {
   .service-description {
     margin-left: 30px;
   }
+}
+
+/* New FAQ specific styles */
+.faq-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    space-y: 20px;
+}
+
+.faq-category {
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+   
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+    .faq-category:hover {
+        border-color: var(--main-orange);
+        box-shadow: 0 5px 20px rgba(235, 83, 54, 0.2);
+    }
+
+.faq-category-header {
+    padding: 20px 30px;
+    background: linear-gradient(135deg, var(--main-blue) 0%, #0a0a2a 100%);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+    .faq-category-header:hover {
+        background: linear-gradient(135deg, #0b0758 0%, #0c0c35 100%);
+    }
+
+.faq-category-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--main-white);
+    margin: 0;
+}
+
+.faq-toggle-icon {
+    font-size: 1.5rem;
+    color: var(--main-orange);
+    transition: transform 0.3s ease;
+}
+
+.faq-category.active .faq-toggle-icon {
+    transform: rotate(180deg);
+}
+
+.faq-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+}
+
+.faq-category.active .faq-content {
+    max-height: 2000px;
+}
+
+.faq-item {
+    border-bottom: 1px solid rgba(235, 83, 54, 0.2);
+    last-child:{
+    border-bottom: none;}
+}
+
+.faq-item:last-child {
+    border-bottom: none;
+}
+
+.faq-question {
+    padding: 20px 30px;
+    background: rgba(9, 6, 80, 0.6);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+    border: none;
+    width: 100%;
+    text-align: left;
+}
+
+    .faq-question:hover {
+        background: rgba(9, 6, 80, 0.8);
+    }
+
+.faq-question-text {
+    font-size: 1.2rem;
+    color: var(--main-orange);
+    font-weight: 700;
+    margin: 0;
+}
+
+.faq-question-icon {
+    font-size: 1.2rem;
+    color: var(--main-orange);
+    transition: transform 0.3s ease;
+}
+
+.faq-item.active .faq-question-icon {
+    transform: rotate(180deg);
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 500px;
+}
+
+.faq-answer-content {
+    padding: 20px 30px;
+    background: rgba(9, 6, 80, 0.4);
+    color: var(--main-white);
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+    .faq-category-header,
+    .faq-question,
+    .faq-answer-content {
+        padding: 15px 20px;
+    }
+
+    .faq-category-title {
+        font-size: 1.3rem;
+    }
+
+    .faq-question-text {
+        font-size: 1rem;
+    }
 }
 
 /*

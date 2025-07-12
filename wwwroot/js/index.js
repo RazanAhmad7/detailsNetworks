@@ -200,3 +200,48 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 });
+
+
+// FAQ
+function toggleCategory(header) {
+    const category = header.parentElement;
+    const isActive = category.classList.contains('active');
+
+    // Close all categories
+    document.querySelectorAll('.faq-category').forEach(cat => {
+        cat.classList.remove('active');
+    });
+
+    // If this category wasn't active, open it
+    if (!isActive) {
+        category.classList.add('active');
+    }
+}
+
+function toggleFAQ(question) {
+    const faqItem = question.parentElement;
+    const isActive = faqItem.classList.contains('active');
+
+    // Close all FAQ items in the same category
+    const category = faqItem.closest('.faq-category');
+    category.querySelectorAll('.faq-item').forEach(item => {
+        item.classList.remove('active');
+    });
+
+    // If this item wasn't active, open it
+    if (!isActive) {
+        faqItem.classList.add('active');
+    }
+}
+
+// Close FAQ items when category is closed
+document.querySelectorAll('.faq-category-header').forEach(header => {
+    header.addEventListener('click', function () {
+        const category = this.parentElement;
+        if (!category.classList.contains('active')) {
+            category.querySelectorAll('.faq-item').forEach(item => {
+                item.classList.remove('active');
+            });
+        }
+    });
+});
