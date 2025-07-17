@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "XDL7iAIL2CAGw4yFPvk771yLswE1x62+0uD7LQc9Yvs=",
+  "Hash": "vDsZ+4nfwP9qG0fvsUf0Gx6cqgj8CSTHJGOB5U1NNzA=",
   "Source": "DetailsNetworks",
   "BasePath": "_content/DetailsNetworks",
   "Mode": "Default",
@@ -167,6 +167,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\66142063e0d1a597f45a3541_Security_Screen-transcode.mp4"
+    },
+    {
+      "Identity": "C:\\LinkedIn Jobs\\DetailsNetworks\\DetailsNetworks\\wwwroot\\images\\Beige Cozy Autumn Vibes Reminder Phone Notification Instagram Post .png",
+      "SourceId": "DetailsNetworks",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\LinkedIn Jobs\\DetailsNetworks\\DetailsNetworks\\wwwroot\\",
+      "BasePath": "_content/DetailsNetworks",
+      "RelativePath": "images/Beige Cozy Autumn Vibes Reminder Phone Notification Instagram Post .png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\Beige Cozy Autumn Vibes Reminder Phone Notification Instagram Post .png"
     },
     {
       "Identity": "C:\\LinkedIn Jobs\\DetailsNetworks\\DetailsNetworks\\wwwroot\\images\\mobileFram.svg",
