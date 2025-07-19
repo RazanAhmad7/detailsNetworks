@@ -117,7 +117,62 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
+// loading reviews from the database: 
+document.addEventListener('DOMContentLoaded', async function () {
+    const container = document.getElementById("reviewsContainer");
+    const maxPerSlide = 6;
 
+    try {
+        const response = await fetch('/Home/GetCustomerReviews');
+        const reviews = await response.json();
+
+        container.innerHTML = ""; // تنظيف المحتوى السابق
+
+        let slide, reviewIndex = 0;
+
+        reviews.forEach((review, i) => {
+            if (i % maxPerSlide === 0) {
+                slide = document.createElement("div");
+                slide.className = "review-slide";
+                container.appendChild(slide);
+            }
+
+            const card = document.createElement("div");
+            card.className = "review-card";
+
+            const starsDiv = document.createElement("div");
+            starsDiv.className = "review-stars";
+            for (let s = 0; s < 5; s++) {
+                const star = document.createElement("i");
+                star.className = s < review.rating ? "fas fa-star text-warning" : "far fa-star text-muted";
+                starsDiv.appendChild(star);
+            }
+
+            const textDiv = document.createElement("div");
+            textDiv.className = "review-text";
+            textDiv.innerHTML = review.text.length > 100
+                ? `${review.text.slice(0, 100)}... <span class="review-readmore">Read more</span>`
+                : review.text;
+
+            const footerDiv = document.createElement("div");
+            footerDiv.className = "review-footer";
+            footerDiv.innerHTML = `
+                <span class="reviewer-name">${review.reviewerName}</span>
+                <span class="review-date">${review.reviewDate}</span>`;
+
+            card.appendChild(starsDiv);
+            card.appendChild(textDiv);
+            card.appendChild(footerDiv);
+            slide.appendChild(card);
+        });
+
+        // إعادة تحميل السلايدر بعد إدخال الريفيوز
+        new ReviewSlider();
+
+    } catch (err) {
+        console.error("Error fetching reviews:", err);
+    }
+});
 
 
 
@@ -165,8 +220,6 @@ document.getElementById("contactForm").addEventListener("submit", async function
 });
 
 
-
-
 // the modal for rating
 // Star Rating Functionality
 document.addEventListener('DOMContentLoaded', function () {
@@ -198,6 +251,48 @@ document.addEventListener('DOMContentLoaded', function () {
                 star.classList.remove('active');
             }
         });
+    }
+});
+// for sumbitting the review form
+    document.getElementById("reviewForm").addEventListener("submit", async function (e) {
+        e.preventDefault();
+
+    const ratingInput = document.getElementById("reviewRating");
+    const nameInput = document.getElementById("reviewerName");
+    const textInput = document.getElementById("reviewText");
+
+    const reviewData = {
+        rating: parseInt(ratingInput.value),
+    reviewerName: nameInput.value.trim(),
+    text: textInput.value.trim()
+    };
+
+    try {
+        const response = await fetch("/Home/SubmitReview", {
+        method: "POST",
+    headers: {
+        "Content-Type": "application/json"
+            },
+    body: JSON.stringify(reviewData)
+        });
+
+    const result = await response.json();
+
+    // Show success toast
+    document.getElementById("toastBody").textContent = result.message;
+    toastElement.classList.remove('bg-danger');
+    toastElement.classList.add('bg-primary');
+    toast.show();
+
+    // Reset form
+    e.target.reset();
+        document.querySelectorAll('#starRating i').forEach(star => star.classList.remove('text-warning'));
+    } catch (err) {
+        // Show error toast
+        document.getElementById("toastBody").textContent = "Error submitting review.";
+    toastElement.classList.remove('bg-primary');
+    toastElement.classList.add('bg-danger');
+    toast.show();
     }
 });
 

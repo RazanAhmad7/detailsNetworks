@@ -932,10 +932,9 @@ html {
 }
 
     .follow-us-image img {
-        max-width: 100%;
+        max-width: 95%;
         height: auto;
         border-radius: 16px;
-        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
     }
 
 .follow-us-text {
@@ -980,6 +979,7 @@ html {
     min-width: 280px;
     position: relative;
     overflow: hidden;
+    min-width: 400px;
 }
 
 .social-link::before {

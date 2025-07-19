@@ -1,4 +1,4 @@
-using DetailsNetworks.Data;
+﻿using DetailsNetworks.Data;
 using DetailsNetworks.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
@@ -36,11 +36,36 @@ namespace DetailsNetworks.Controllers
             return Ok(new { message = "Thank you, your message has been received successfully!" });
         }
 
-
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
+        [HttpPost]
+        public IActionResult SubmitReview([FromBody] CustomerReview review)
         {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(new { message = "Please complete all required fields correctly." });
+            }
+
+            review.ReviewDate = DateTime.UtcNow;
+            _context.CustomerReviews.Add(review);
+            _context.SaveChanges();
+
+            return Ok(new { message = "Thank you for your review!" });
         }
+
+        public IActionResult GetCustomerReviews()
+        {
+            var reviews = _context.CustomerReviews
+                .OrderByDescending(r => r.ReviewDate)
+                .Select(r => new
+                {
+                    r.Rating,
+                    r.Text,
+                    r.ReviewerName,
+                    ReviewDate = r.ReviewDate.ToString("MMMM dd") // مثل "June 10"
+                })
+                .ToList();
+
+            return Json(reviews);
+        }
+
     }
 }
