@@ -1,0 +1,45 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Login</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+      
+</head>
+<body>
+    <div class="login-container">
+        <h2>Admin Login</h2>
+        @if (ViewData.ModelState[""]?.Errors.Count > 0)
+        {
+            <div class="error-message">
+                @ViewData.ModelState[""].Errors[0].ErrorMessage
+            </div>
+        }
+        <form asp-action="Login" asp-controller="Admin" method="post">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="Username" value="@Model?.Username" required />
+            <div class="validation-message">
+                @if (ViewData.ModelState["Username"]?.Errors.Count > 0)
+                {
+                    <text>@ViewData.ModelState["Username"].Errors[0].ErrorMessage</text>
+                }
+            </div>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="Password" required />
+            <div class="validation-message">
+                @if (ViewData.ModelState["Password"]?.Errors.Count > 0)
+                {
+                    <text>@ViewData.ModelState["Password"].Errors[0].ErrorMessage</text>
+                }
+            </div>
+
+            <button type="submit">Login</button>
+        </form>
+    </div>
+</body>
+</html>

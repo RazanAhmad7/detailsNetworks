@@ -1,0 +1,594 @@
+﻿@model DetailsNetworks.ViewModels.AdminDashboardViewModel
+
+@{
+    ViewData["Title"] = "Admin Dashboard";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        html {
+            font-size: 14px;
+        }
+        @@media (min-width: 768px) {
+            html {
+                font-size: 16px;
+            }
+        }
+        
+        :root {
+            --main-blue: #090650;
+            --main-orange: #eb5336;
+            --main-white: #ffffff;
+        }
+
+        body {
+            background: radial-gradient(ellipse at 100% 50%, #2a64a5 0%, #090650 70%);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            min-height: 100vh;
+            color: var(--main-white);
+        }
+
+        .btn:focus,
+        .btn:active:focus,
+        .btn-link.nav-link:focus,
+        .form-control:focus,
+        .form-check-input:focus {
+            box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+        }
+
+        .btn-primary {
+            background-color: var(--main-orange) !important;
+            border: none !important;
+        }
+        
+        .btn-primary:hover,
+        .btn-primary:focus {
+            background-color: #c43e23 !important;
+        }
+
+        .btn-outline-light {
+            border-color: var(--main-white) !important;
+            color: var(--main-white) !important;
+            transition: background 0.2s, color 0.2s;
+        }
+        
+        .btn-outline-light:hover,
+        .btn-outline-light:focus {
+            background: var(--main-orange) !important;
+            color: var(--main-white) !important;
+            border-color: var(--main-orange) !important;
+        }
+
+        .dashboard-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--main-white);
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            margin-bottom: 2rem;
+        }
+
+        .dashboard-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 15px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .dashboard-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        .card-header-custom {
+            background: linear-gradient(135deg, var(--main-orange), #c43e23);
+            border-radius: 15px 15px 0 0 !important;
+            padding: 1.25rem;
+            border: none;
+        }
+
+        .card-title {
+            color: var(--main-white);
+            font-weight: 600;
+            font-size: 1.3rem;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .review-card {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .review-card:hover {
+            background: rgba(255, 255, 255, 0.12);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .review-header {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .review-stars {
+            font-size: 1rem;
+        }
+
+        .star-filled {
+            color: #ffc107;
+            text-shadow: 0 0 4px rgba(255, 193, 7, 0.3);
+        }
+
+        .star-empty {
+            color: rgba(255, 255, 255, 0.25);
+        }
+
+        .review-rating-badge {
+            background: linear-gradient(135deg, var(--main-orange), #c43e23);
+            color: white;
+            padding: 0.2rem 0.6rem;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        .review-text {
+            display: -webkit-box;
+            -webkit-line-clamp: 4;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+            .review-text.expanded {
+                display: block; /* Remove clamp */
+                overflow: visible;
+            }
+
+        .read-more-btn {
+            display: none; /* Hidden by default */
+            color: var(--main-orange);
+            cursor: pointer;
+        }
+
+            .read-more-btn.visible {
+                display: inline-block;
+            }
+
+
+
+        .reviewer-info {
+            display: flex;
+            flex-direction: column;
+            gap: 0.2rem;
+        }
+
+        .reviewer-name {
+            font-weight: 700;
+            color: var(--main-orange);
+            font-size: 0.95rem;
+        }
+
+        .review-date {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.8rem;
+        }
+
+        .action-buttons .btn {
+            font-size: 0.85rem;
+            padding: 0.4rem 0.8rem;
+            border-radius: 6px;
+            font-weight: 500;
+        }
+
+        .btn-success {
+            background-color: #28a745;
+            border-color: #28a745;
+        }
+
+        .btn-success:hover {
+            background-color: #218838;
+            border-color: #218838;
+        }
+
+        .btn-danger {
+            background-color: #dc3545;
+            border-color: #dc3545;
+        }
+
+        .btn-danger:hover {
+            background-color: #c82333;
+            border-color: #c82333;
+        }
+
+        .approved-btn {
+            background-color: transparent;
+            color: #33dd88; /* a soft green */
+            border: 1px solid #33dd88;
+            box-shadow: 0 0 6px rgba(51, 221, 136, 0.3);
+            transition: all 0.3s ease;
+        }
+
+            .approved-btn:hover {
+                background-color: rgba(51, 221, 136, 0.1);
+                border-color: #33dd88;
+                color: #33dd88;
+                box-shadow: 0 0 10px rgba(51, 221, 136, 0.5);
+            }
+
+        .rejected-btn {
+            background-color: transparent;
+            color: #ff6b6b; /* soft red tone */
+            border: 1px solid #ff6b6b;
+            box-shadow: 0 0 6px rgba(255, 107, 107, 0.3);
+            transition: all 0.3s ease;
+        }
+
+            .rejected-btn:hover {
+                background-color: rgba(255, 107, 107, 0.1);
+                border-color: #ff6b6b;
+                color: #ff6b6b;
+                box-shadow: 0 0 10px rgba(255, 107, 107, 0.5);
+            }
+
+        .table-custom {
+            background: transparent;
+            border-radius: 0;
+            overflow: hidden;
+        }
+
+        .table-custom th {
+            background: rgba(255, 255, 255, 0.08);
+            color: var(--main-white);
+            font-weight: 700;
+            border: none;
+            padding: 1.2rem 1rem;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            border-bottom: 2px solid var(--main-orange);
+        }
+
+        .table-custom td {
+            border: none;
+            padding: 1rem;
+            vertical-align: middle;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            color: var(--main-white);
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        .table-custom tbody tr:hover {
+            background: rgba(255, 255, 255, 0.08);
+            transform: scale(1.001);
+            transition: all 0.2s ease;
+        }
+
+        .message-row {
+            transition: all 0.2s ease;
+        }
+
+        .user-avatar {
+            font-size: 1.8rem;
+            color: var(--main-orange);
+        }
+
+        .email-link, .phone-link {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .email-link:hover, .phone-link:hover {
+            color: var(--main-orange);
+            text-decoration: underline;
+        }
+
+        .message-text {
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            max-width:350px;
+        }
+
+            .message-text.expanded {
+                display: block;
+                overflow: visible;
+                max-height: none;
+            }
+
+
+
+        .date-badge {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .action-dropdown .dropdown-menu {
+            background: rgba(9, 6, 80, 0.95);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+        }
+
+        .action-dropdown .dropdown-item {
+            color: var(--main-white);
+            transition: background 0.2s ease;
+        }
+
+        .action-dropdown .dropdown-item:hover {
+            background: var(--main-orange);
+            color: white;
+        }
+
+        .header-actions .btn {
+            margin-left: 0.5rem;
+            font-size: 0.85rem;
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 4rem 2rem;
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .empty-state i {
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+            color: rgba(255, 255, 255, 0.25);
+        }
+
+        .empty-state h4 {
+            color: var(--main-white);
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .empty-state p {
+            font-size: 0.95rem;
+            margin: 0;
+        }
+
+        .accent {
+            color: var(--main-white);
+        }
+    </style>
+</head>
+<body>
+    @Html.AntiForgeryToken()
+
+    <div class="container py-5">
+        <h1 class="dashboard-title text-center">Admin Dashboard</h1>
+        
+        <!-- Customer Reviews Section -->
+        <div class="row mb-5">
+            <div class="col-12">
+                <div class="dashboard-card">
+                    <div class="card-header-custom">
+                        <h2 class="card-title">
+                            <i class="fas fa-star"></i>
+                            <span class="accent">Customer Reviews Management</span>
+                        </h2>
+                    </div>
+                    <div class="card-body p-4">
+                        @if (Model.CustomerReviews != null && Model.CustomerReviews.Count > 0)
+                        {
+                            <div class="row g-4">
+                                @foreach (var review in Model.CustomerReviews)
+                                {
+                                    <div class="col-xl-4 col-lg-4 col-md-6">
+                                        <div class="review-card p-4 h-100 d-flex flex-column" data-review-id="@review.Id">
+                                            <div class="review-header mb-3">
+                                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                                    <div class="review-stars">
+                                                        @for (int i = 1; i <= 5; i++)
+                                                        {
+                                                            <i class="fa fa-star@(i <= review.Rating ? " star-filled" : " star-empty")"></i>
+                                                        }
+                                                    </div>
+                                                    <span class="review-rating-badge">@review.Rating/5</span>
+                                                </div>
+                                                <div class="reviewer-info">
+                                                    <span class="reviewer-name">@review.ReviewerName</span>
+                                                    <span class="review-date">@review.ReviewDate.ToString("MMM dd, yyyy")</span>
+                                                </div>
+                                            </div>
+                                            <div class="review-content flex-grow-1 mb-3">
+                                                <div class="review-text">@review.Text</div>
+                                                <span class="read-more-btn">Read more</span>
+                                            </div>
+
+                                            <div class="action-buttons mt-auto">
+                                                <div class="d-grid gap-2">
+                                                    <div class="d-grid gap-2">
+
+                                                        <!-- Approve / Reject buttons for Pending status -->
+                                                        @if (review.Status == "Pending")
+                                                        {
+                                                            <div class="btn-group review-action-buttons" role="group">
+                                                                <button class="btn btn-success btn-sm accept-btn">
+                                                                    <i class="fas fa-check"></i> Accept
+                                                                </button>
+                                                                <button class="btn btn-danger btn-sm reject-btn">
+                                                                    <i class="fas fa-times"></i> Reject
+                                                                </button>
+                                                            </div>
+                                                        }
+
+                                                        <!-- Always render both Approved and Rejected buttons -->
+                                                        <button class="btn btn-outline-success btn-sm approved-btn @(review.Status == "Approved" ? "" : "d-none")" disabled style="border-width:2px; border-color: chartreuse; color:chartreuse">
+                                                            <i class="fas fa-check-circle"></i> Approved
+                                                        </button>
+
+                                                        <button class="btn btn-outline-danger btn-sm rejected-btn @(review.Status == "Rejected" ? "" : "d-none")" disabled style="border-width:2px; border-color:  #eb5336; color: #eb5336;">
+                                                            <i class="fas fa-times-circle"></i> Rejected
+                                                        </button>
+
+                                                        <button class="btn btn-outline-light btn-sm change-status-btn @(review.Status == "Pending" ? "disabled" : "")" data-review-id="@review.Id">
+                                                            <i class="fas fa-sync-alt"></i> Change Status
+                                                        </button>
+
+                                                    </div>
+
+
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                }
+                            </div>
+                        }
+                        else
+                        {
+                            <div class="empty-state">
+                                <i class="fas fa-star-o"></i>
+                                <h4>No Customer Reviews</h4>
+                                <p>There are no customer reviews to manage at this time.</p>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Messages Section -->
+        <div class="row">
+            <div class="col-12">
+                <div class="dashboard-card">
+                    <div class="card-header-custom d-flex justify-content-between align-items-center">
+                        <h2 class="card-title">
+                            <i class="fas fa-envelope"></i>
+                            <span class="accent">Contact Messages</span>
+                        </h2>
+                        <div class="header-actions">
+                            <button class="btn btn-outline-light btn-sm">
+                                <i class="fas fa-filter"></i> Filter
+                            </button>
+                            <button class="btn btn-outline-light btn-sm">
+                                <i class="fas fa-export"></i> Export
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card-body p-0">
+                        @if (Model.ContactMessages != null && Model.ContactMessages.Count > 0)
+                        {
+                            <div class="table-responsive">
+                                <table class="table table-custom table-hover align-middle mb-0">
+                                    <thead>
+                                        <tr>
+                                            <th class="ps-4">
+                                                <i class="fas fa-user text-muted me-2"></i>Name
+                                            </th>
+                                            <th>
+                                                <i class="fas fa-envelope text-muted me-2"></i>Email
+                                            </th>
+                                            <th>
+                                                <i class="fas fa-phone text-muted me-2"></i>Phone
+                                            </th>
+                                            <th>
+                                                <i class="fas fa-comment text-muted me-2"></i>Message
+                                            </th>
+                                            <th>
+                                                <i class="fas fa-calendar text-muted me-2"></i>Date
+                                            </th>
+                                            <th class="pe-4">Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var msg in Model.ContactMessages)
+                                        {
+                                            <tr class="message-row">
+                                                <td class="ps-4">
+                                                    <div class="d-flex align-items-center">
+                                                        <div class="user-avatar me-3">
+                                                            <i class="fas fa-user-circle"></i>
+                                                        </div>
+                                                        <strong>@msg.Name</strong>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <a href="mailto:@msg.Email" class="email-link">@msg.Email</a>
+                                                </td>
+                                                <td>
+                                                    <a href="tel:@msg.PhoneNumber" class="phone-link">@msg.PhoneNumber</a>
+                                                </td>
+                                                <td>
+                                                    <div class="message-content">
+                                                        <div class="message-text">
+                                                            @msg.Message
+                                                        </div>
+                                                        <span class="read-more-btn">Read more</span>
+                                                    </div>
+                                                </td>
+
+                                                <td>
+                                                    <span class="date-badge">@msg.SubmittedAt.ToString("MMM dd, yyyy")</span>
+                                                </td>
+                                                <td>
+                                                    <form asp-action="DeleteContact" asp-route-id="@msg.Id" method="post">
+                                                        @Html.AntiForgeryToken()
+                                                        <button type="button" class="btn btn-link text-danger p-0 delete-contact-btn" title="Delete">
+                                                            <i class="fas fa-trash-alt"></i>
+                                                        </button>
+                                                    </form>
+
+                                                </td>
+
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                        }
+                        else
+                        {
+                            <div class="empty-state">
+                                <i class="fas fa-inbox"></i>
+                                <h4>No Contact Messages</h4>
+                                <p>No messages have been received yet. Check back later.</p>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="~/js/dashboard.js">
+
+    </script>
+    <script>
+        
+
+    </script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+@section Scripts {
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+}

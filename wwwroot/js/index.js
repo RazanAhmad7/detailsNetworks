@@ -175,6 +175,24 @@ document.addEventListener('DOMContentLoaded', async function () {
 });
 
 
+// how many characters left:
+document.addEventListener("DOMContentLoaded", function () {
+    const reviewText = document.getElementById("reviewText");
+    const charCount = document.getElementById("charCount");
+    const maxLength = parseInt(reviewText.getAttribute("maxlength"), 10);
+
+    reviewText.addEventListener("input", function () {
+        const length = reviewText.value.length;
+
+        if (length === 0) {
+            charCount.classList.add("d-none"); // hide counter if empty
+        } else {
+            charCount.classList.remove("d-none"); // show counter when typing
+            charCount.textContent = `${length}/${maxLength}`;
+        }
+    });
+});
+
 
 // for submitting the contact form
 // Initialize the Bootstrap toast instance
@@ -263,8 +281,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const reviewData = {
         rating: parseInt(ratingInput.value),
-    reviewerName: nameInput.value.trim(),
-    text: textInput.value.trim()
+        reviewerName: nameInput.value.trim(),
+        text: textInput.value.trim(),
+        status: "Pending" // Default status
     };
 
     try {

@@ -17,5 +17,6 @@ namespace DetailsNetworks.Models
         public string ReviewerName { get; set; }
 
         public DateTime ReviewDate { get; set; }
+        public string Status { get; set; }
     }
 }

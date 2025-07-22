@@ -1,5 +1,6 @@
 using DetailsNetworks.Data;
 using DetailsNetworks.Models;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
@@ -12,6 +13,18 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 // Register PasswordHasher
 builder.Services.AddScoped<IPasswordHasher<AdminUser>, PasswordHasher<AdminUser>>();
 
+// Add authentication services
+builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+    .AddCookie(options =>
+    {
+        options.LoginPath = "/Login";
+        options.AccessDeniedPath = "/Login";
+        options.Cookie.Name = "AlmajedAdmin";
+        options.ExpireTimeSpan = TimeSpan.FromHours(2);
+    });
+
+// Add authorization services
+builder.Services.AddAuthorization();
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();

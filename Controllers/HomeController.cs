@@ -54,13 +54,14 @@ namespace DetailsNetworks.Controllers
         public IActionResult GetCustomerReviews()
         {
             var reviews = _context.CustomerReviews
+                 .Where(r => r.Status == "Approved")
                 .OrderByDescending(r => r.ReviewDate)
                 .Select(r => new
                 {
                     r.Rating,
                     r.Text,
                     r.ReviewerName,
-                    ReviewDate = r.ReviewDate.ToString("MMMM dd") // مثل "June 10"
+                    ReviewDate = r.ReviewDate.ToString("MMMM dd") // مثل "June 10",
                 })
                 .ToList();
 
